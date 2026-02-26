@@ -41,11 +41,12 @@ If you find any part of this repository useful, feel free to copy, adapt, or
 fork it according to your own requirements. **It should be viewed as a practical
 reference implementation rather than a prescriptive standard**.
 
+<!-- prettier-ignore-start -->
 > [!IMPORTANT]
-
 > Some configurations may assume familiarity with the associated tools, as the
 > focus is on sharing finalized setups rather than explaining every individual
 > configuration decision.
+<!-- prettier-ignore-end -->
 
 # Table of Contents
 
@@ -76,12 +77,13 @@ important to follow the official
 [**_`documentation`_**](https://komorebi-starlight.lgug2z.workers.dev/guides/installation/)
 to ensure everything is set up correctly.
 
+<!-- prettier-ignore-start -->
 > [!WARNING]
-
 > The documentation provides important recommendations, such as:
 > [**_`enabling long path support`_**](http://komorebi-starlight.lgug2z.workers.dev/guides/installation/#suggested-system-settings)
 > and
 > [**_`disabling unnecessary system animations`_**](https://lgug2z.github.io/komorebi/installation.html#disabling-unnecessary-system-animations).
+<!-- prettier-ignore-end -->
 
 ### Configurations
 
@@ -148,11 +150,12 @@ configuration:
 | alt + j                     | Switch to the next layout              |
 | alt + k                     | Switch to the previous layout          |
 
+<!-- prettier-ignore-start -->
 > [!WARNING]
-
 > In my komorebi.json config, I use the
 > [**_`JetBrains Mono`_**](https://www.jetbrains.com/lp/mono/) font. You can
 > change it to any font you like.
+<!-- prettier-ignore-end -->
 
 ### Tips
 
@@ -189,10 +192,11 @@ from sleep, minor crashes in edge cases, and problems with window placement when
 using multiple workspaces. These issues are actively being addressed, and
 updates often improve stability and performance.
 
+<!-- prettier-ignore-start -->
 > [!WARNING]
-
 > Many common issues are already explained in the
 > [**_`documentations`_**](https://komorebi-starlight.lgug2z.workers.dev/guides/known-issues/)
+<!-- prettier-ignore-end -->
 
 <!-- --- --- Style Overrides --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
 
@@ -368,9 +372,10 @@ present in my configuration are:
 | Clock                     | Shows current time and date with an alternate format toggle.                               |
 | Power Menu                | Provides a popup menu with power options such as lock, restart, and shutdown.              |
 
+<!-- prettier-ignore-start -->
 > [!NOTE]
-
 > Most animations and tooltips are disabled!
+<!-- prettier-ignore-end -->
 
 ### Inpirations
 
@@ -430,7 +435,8 @@ windows, the taskbar, or visual effects. High-frequency updates or animations
 may slightly impact performance on older hardware. Always back up your
 configuration and monitor system behavior.
 
+<!-- prettier-ignore-start -->
 > [!WARNING]
-
 > Many common issues are already explained or resolved in the
 > [**_`FAQ`_**](https://docs.yasb.dev/latest/faq)
+<!-- prettier-ignore-end -->
