@@ -193,3 +193,58 @@ updates often improve stability and performance.
 
 > Many common issues are already explained in the
 > [**_`documentations`_**](https://komorebi-starlight.lgug2z.workers.dev/guides/known-issues/)
+
+<!-- --- --- Style Overrides --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
+
+## Style Overrides
+
+### Overview
+
+The goal of this section is to create **CSS style overrides that modify parts of
+the HTML page to make content easier to see, improve readability, and enhance
+the overall user experience**. These custom styles aim to make the page simpler
+and more pleasant to interact with.
+
+To implement the **custom CSS configurations listed below**, you can use the
+Stylus browser extension or any other extension that allows injecting custom
+styles into web pages. **The following steps guide you through creating a new
+style and configuring it for the desired website**:
+
+1. Install the
+   [**_`Stylus`_**](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
+   extension from the Chrome Web Store .
+2. Open the Chrome extensions page and select `Manage` for Stylus.
+3. Click the `Write new style` button (or the `+` icon) to create a new style.
+4. Assign a descriptive name to the style you are creating.
+5. Paste your CSS code into the provided code editor.
+6. Set the style’s target by selecting `URLs starting with` and entering the
+   appropriate website `URL` (e.g., `https://www.google.com`).
+7. Save the style by clicking the `Save` button or pressing `Ctrl + S`.
+
+### Configurations
+
+You can access my configuration file here:
+
+- [**_`google-center-searchResults.css`_**](./style-overrides/google-center-searchResults.css)
+- [**_`youtube-center-commentsSection.css`_**](./style-overrides/youtube-center-commentsSection.css)
+
+#### Google Center Search Results
+
+This CSS code customizes the Google search results page. It centers all content,
+limits the main page width, and keeps the floating search bar aligned in the
+center. It also hides extra elements like “People also search for,” the AI Mode
+option, and the footer, while preventing the search bar from stretching too much
+when focused.
+
+#### Youtube Center Comments Section
+
+This CSS code adjusts the YouTube comments section by limiting its width and
+centering it on the page, making the comments easier to read and visually
+balanced.
+
+### Known Issues
+
+Since these styles are injected via CSS, some page elements might not display
+correctly or could behave unexpectedly. If you encounter any issues, you can
+easily resolve them by disabling Stylus or any other extension that injects
+custom CSS into pages.
