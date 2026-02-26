@@ -46,3 +46,12 @@ reference implementation rather than a prescriptive standard**.
 > Some configurations may assume familiarity with the associated tools, as the
 > focus is on sharing finalized setups rather than explaining every individual
 > configuration decision.
+
+# Table of Contents
+
+- [Browser Extensions](#browser-extensions)
+- [Komorebi](#komorebi)
+- [Style Overrides](#style-overrides)
+- [VS Code](#vs-code)
+- [Windows Debloat Install](#windows-debloat-install)
+- [YASB - Yet Another Status Bar](#yasb---yet-another-status-bar)
