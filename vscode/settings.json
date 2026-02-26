@@ -1,0 +1,145 @@
+/*
+  // Git Initial Configuration and Setup
+
+  git config --local user.name "Lucas Okokama"
+  git config --local user.email "lucaslko429@gmail.com"
+
+  git config --global init.defaultBranch main
+  git config --global core.editor "code --wait"
+  git config --global core.ignorecase false
+
+  git config --list
+*/
+
+{
+  // File opening behavior
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
+
+  // Autosave, Formatting, Imports and Error Checking
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // https://marketplace.visualstudio.com/items/?itemName=esbenp.prettier-vscode
+  "prettier.proseWrap": "always",
+  "prettier.useTabs": false,
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.semi": true,
+  "prettier.trailingComma": "all",
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml" // https://marketplace.visualstudio.com/items/?itemName=redhat.vscode-yaml
+  },
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml" // https://marketplace.visualstudio.com/items/?itemName=redhat.vscode-yaml
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml" // https://marketplace.visualstudio.com/items/?itemName=redhat.vscode-yaml
+  },
+
+  "editor.codeActionsOnSave": {
+    "source.sortImports": "always",
+    "source.fixAll": "always"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.suggest.autoImports": true,
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+
+  "typescript.validate.enable": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "errorLens.messageTemplate": "$message ($source)",
+  "errorLens.onSave": false,
+
+  // General Personalization
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Mayukai Mono", // https://marketplace.visualstudio.com/items/?itemName=GulajavaMinistudio.mayukaithemevsc
+  "editor.fontFamily": "JetBrains Mono", // https://www.jetbrains.com/lp/mono/
+  "workbench.iconTheme": "bearded-icons", // https://marketplace.visualstudio.com/items?itemName=BeardedBear.beardedicons
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.editor.empty.hint": "hidden",
+  "editor.smoothScrolling": true,
+  "editor.find.seedSearchStringFromSelection": "never",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "phase",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+  "extensions.ignoreRecommendations": true,
+  "extensions.showRecommendationsOnlyOnDemand": true,
+  "update.mode": "start",
+  "update.showReleaseNotes": false,
+  "files.restoreUndoStack": false,
+
+  // Header
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.labelFormat": "default",
+
+  // Left painel
+  "explorer.copyRelativePathSeparator": "/",
+  "workbench.activityBar.location": "hidden",
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 22,
+  "explorer.sortOrder": "foldersNestsFiles",
+  "explorer.compactFolders": false,
+  "explorer.autoReveal": false,
+  "explorer.decorations.badges": false,
+  "workbench.editor.enablePreview": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+
+  // Center Painel (code editor)
+  "editor.stickyScroll.enabled": false,
+  "editor.lightbulb.enabled": "off",
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.highlightActiveBracketPair": true,
+  "editor.fontSize": 12,
+  "editor.lineHeight": 1.8,
+  "editor.fontWeight": "300",
+  "editor.fontLigatures": true,
+  "editor.linkedEditing": true,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.renderWhitespace": "boundary",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "editor.fastScrollSensitivity": 453,
+  "editor.mouseWheelScrollSensitivity": 1.2,
+
+  // Right painel
+  "editor.minimap.enabled": false,
+  // "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "terminal.integrated.fontFamily": "JetBrains Mono", // https://www.jetbrains.com/lp/mono/
+  "terminal.integrated.defaultProfile.windows": "Git Bash", // https://git-scm.com/downloads
+  "terminal.integrated.fontSize": 10,
+  "terminal.integrated.lineHeight": 1.8,
+
+  // Bottom painel
+  "workbench.statusBar.visible": false
+}
