@@ -1,0 +1,442 @@
+:root {
+  /* Sizing Tokens */
+  --default-font-size: 10px;
+  --default-icon-size: 14px;
+  --default-border-radius-edge: 16px;
+  --default-border-radius-middle: 4px;
+  --default-border-radius-modal: 8px;
+
+  /* Base Color Tokens  */
+  --default-base-color: #11111b;
+  --default-surface-zero-color: #181825;
+  --default-surface-one-color: #1e2030;
+  --default-surface-two-color: #313244;
+  --default-text-one-color: #cdd6f4;
+  --default-text-two-color: #9399b2;
+  --default-text-three-color: #585b70;
+
+  /* Accent Color Tokens  */
+  --latte-rosewater: #dc8a78;
+  --frappe-red: #e78284;
+  --frappe-peach: #ef9f76;
+  --frappe-yellow: #e5c890;
+  --frappe-green: #a6d189;
+  --frappe-sapphire: #85c1dc;
+  --frappe-lavender: #babbf1;
+
+  /* Spacing Tokens */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-20: 20px;
+  --space-22: 22px;
+  --space-24: 24px;
+  --space-26: 26px;
+  --space-28: 28px;
+  --space-30: 30px;
+}
+
+/* ========================================== GLOBAL ========================================== */
+* {
+  font-size: var(--default-font-size);
+  color: var(--default-text-one-color);
+  font-weight: 600;
+  font-family: 'JetBrainsMono NFP';
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================================== YASB MAIN STYLE ========================================== */
+.yasb-bar {
+  background-color: transparent;
+}
+
+.widget {
+  margin: 0 var(--space-4);
+  padding: 0 var(--space-12);
+  background-color: var(--default-base-color);
+  border-radius: var(--default-border-radius-middle);
+  border: 1px solid var(--default-surface-two-color);
+}
+
+.icon {
+  font-size: var(--default-icon-size);
+  padding-left: var(--space-2);
+}
+
+/* ========================================== WIDGETS ========================================== */
+/* --------------------------- Super Start Menu Widget --------------------------- */
+.super-start-menu-widget {
+  margin-left: 0;
+  border-top-left-radius: var(--default-border-radius-edge);
+  border-bottom-left-radius: var(--default-border-radius-edge);
+}
+.super-start-menu-widget .widget-container .icon {
+  color: var(--frappe-sapphire);
+}
+
+/* --------------------------- Komorebi Workspaces Widget --------------------------- */
+.komorebi-workspaces {
+  padding: 0 var(--space-6);
+}
+.komorebi-workspaces .ws-btn {
+  padding: var(--space-4) var(--space-8);
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+}
+.komorebi-workspaces .ws-btn.active {
+  background-color: var(--latte-rosewater);
+  border-radius: var(--default-border-radius-middle);
+  font-weight: 900;
+  color: var(--default-base-color);
+}
+
+/* --------------------------- Applications Widget --------------------------- */
+.apps-widget {
+  padding: 0 var(--space-6);
+}
+.apps-widget .widget-container .label {
+  padding: 0 var(--space-4);
+  font-size: var(--default-icon-size);
+  color: var(--frappe-lavender);
+}
+
+/* --------------------------- Systray Widget  --------------------------- */
+.systray {
+  padding: 0 var(--space-6);
+}
+.systray .button {
+  padding: var(--space-4);
+  border-radius: var(--default-border-radius-middle);
+}
+.systray .button:hover {
+  background-color: var(--default-surface-one-color);
+}
+
+/* --------------------------- Media Widget  --------------------------- */
+.media-widget .label {
+  font-size: 12px;
+}
+.media-menu {
+  min-width: 460px;
+  max-width: 460px;
+  background-color: var(--default-base-color);
+  border-radius: var(--default-border-radius-modal);
+}
+.media-menu .title,
+.media-menu .artist,
+.media-menu .source {
+  margin-left: var(--space-10);
+  color: var(--default-text-two-color);
+  font-size: 12px;
+}
+.media-menu .artist {
+  margin-top: var(--space-6);
+  color: var(--default-text-three-color);
+}
+.media-menu .btn {
+  margin-top: var(--space-14);
+  font-family: 'Segoe Fluent Icons';
+  font-size: var(--default-icon-size);
+  font-weight: 400;
+  font-size: var(--default-icon-size);
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  border-radius: 20px;
+}
+.media-menu .btn.prev,
+.media-menu .btn.next {
+  color: var(--default-text-one-color);
+}
+.media-menu .btn:hover {
+  background-color: var(--default-surface-zero-color);
+}
+.media-menu .btn.play {
+  background-color: var(--default-surface-one-color);
+  color: var(--default-text-one-color);
+  font-size: 18px;
+}
+.media-menu .btn.play:hover {
+  background-color: var(--default-surface-zero-color);
+}
+.media-menu .btn.disabled:hover,
+.media-menu .btn.disabled {
+  color: var(--default-text-three-color);
+  background-color: transparent;
+}
+.media-menu .source {
+  margin-top: var(--space-10);
+  padding: var(--space-2) var(--space-8);
+  padding-bottom: var(--space-6);
+  background-color: var(--default-surface-zero-color);
+  color: var(--default-text-three-color);
+  border-radius: var(--default-border-radius-middle);
+}
+.media-menu .playback-time {
+  margin-top: var(--space-20);
+  color: var(--default-text-two-color);
+}
+.media-menu .progress-slider {
+  margin: 0 var(--space-4);
+  margin-top: var(--space-4);
+}
+.media-menu .progress-slider::groove {
+  height: 4px;
+  background-color: var(--default-surface-zero-color);
+}
+.media-menu .progress-slider::groove:hover {
+  background-color: var(--default-surface-two-color);
+}
+.media-menu .progress-slider::sub-page {
+  background-color: var(--default-text-two-color);
+}
+
+/* --------------------------- Taskbar Widget --------------------------- */
+.taskbar-widget {
+  padding: 0 var(--space-6);
+  border-radius: var(--default-border-radius-edge);
+}
+.taskbar-widget .app-container {
+  margin: var(--space-4) var(--space-2);
+  padding: 0px var(--space-6);
+  border-radius: var(--space-10);
+}
+.taskbar-widget .app-container.foreground {
+  background-color: var(--default-surface-one-color);
+}
+.taskbar-widget .app-container:hover {
+  background-color: var(--default-surface-zero-color);
+}
+
+/* --------------------------- Active Window Widget  --------------------------- */
+.active-window-widget {
+  padding: 0 var(--space-6);
+}
+.active-window-widget .widget-container .label {
+  margin: 0 var(--space-4);
+}
+.active-window-widget .widget-container .icon {
+  margin: 0 var(--space-4);
+}
+
+/* --------------------------- Memory Widget  --------------------------- */
+.memory-widget {
+  padding: 0;
+  background-color: var(--frappe-sapphire);
+  border-top-left-radius: var(--default-border-radius-edge);
+  border-bottom-left-radius: var(--default-border-radius-edge);
+}
+.memory-widget .widget-container .label {
+  margin: var(--space-2);
+  padding: 0 var(--space-10);
+  background-color: var(--default-base-color);
+  border-radius: var(--default-border-radius-middle);
+}
+.memory-widget .widget-container .icon {
+  color: var(--default-base-color);
+  margin: 0 var(--space-6);
+}
+
+/* --------------------------- CPU Widget  --------------------------- */
+.cpu-widget {
+  padding: 0;
+  background-color: var(--frappe-red);
+}
+.cpu-widget .widget-container .label {
+  margin: var(--space-2);
+  padding: 0 var(--space-10);
+  background-color: var(--default-base-color);
+  border-radius: var(--default-border-radius-middle);
+}
+.cpu-widget .widget-container .icon {
+  margin: 0 var(--space-6);
+  color: var(--default-base-color);
+}
+
+/* --------------------------- Disk Widget  --------------------------- */
+.disk-widget {
+  padding: 0;
+  background-color: var(--frappe-yellow);
+}
+.disk-widget .widget-container .label {
+  margin: var(--space-2);
+  padding: 0 var(--space-10);
+  background-color: var(--default-base-color);
+  border-radius: var(--default-border-radius-middle);
+}
+.disk-widget .widget-container .icon {
+  margin: 0 var(--space-6);
+  color: var(--default-base-color);
+}
+
+/* --------------------------- Recycle Bin Widget --------------------------- */
+.recycle-bin-widget {
+  padding: 0;
+  background-color: var(--frappe-yellow);
+}
+.recycle-bin-widget .widget-container .label {
+  margin: var(--space-2);
+  padding: 0 var(--space-10);
+  background-color: var(--default-base-color);
+  border-radius: var(--default-border-radius-middle);
+}
+.recycle-bin-widget .widget-container .icon {
+  margin-left: var(--space-8);
+  color: var(--default-base-color);
+}
+
+/* --------------------------- Microphone Widget  --------------------------- */
+.microphone-widget {
+  padding: 0;
+  background-color: var(--frappe-green);
+}
+.microphone-widget .widget-container .label {
+  margin: var(--space-2);
+  padding: 0 var(--space-10);
+  background-color: var(--default-base-color);
+  border-radius: var(--default-border-radius-middle);
+}
+.microphone-widget .widget-container .icon {
+  margin: 0 var(--space-6);
+  color: var(--default-base-color);
+}
+.microphone-menu {
+  background-color: var(--default-base-color);
+}
+.microphone-menu .microphone-container .device {
+  margin: var(--space-2);
+  padding: var(--space-6) var(--space-8);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--default-border-radius-middle);
+  text-align: left;
+}
+.microphone-menu .microphone-container .device.selected {
+  background-color: var(--default-surface-one-color);
+}
+.microphone-menu .microphone-container .device:hover {
+  background-color: var(--default-surface-zero-color);
+}
+.microphone-menu .system-volume-container {
+  margin-top: var(--space-14);
+}
+
+/* --------------------------- Volume Widget  --------------------------- */
+.volume-widget {
+  padding: 0;
+  background-color: var(--frappe-green);
+}
+.volume-widget .widget-container .label {
+  margin: var(--space-2);
+  padding: 0 var(--space-10);
+  background-color: var(--default-base-color);
+  border-radius: var(--default-border-radius-middle);
+}
+.volume-widget .widget-container .icon {
+  color: var(--default-base-color);
+  margin: 0 var(--space-6);
+}
+.audio-menu {
+  background-color: var(--default-base-color);
+}
+.audio-menu .audio-container .device {
+  margin: var(--space-2);
+  padding: var(--space-6) var(--space-8);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--default-border-radius-middle);
+  text-align: left;
+}
+.audio-menu .audio-container .device.selected {
+  background-color: var(--default-surface-one-color);
+}
+.audio-menu .audio-container .device:hover {
+  background-color: var(--default-surface-zero-color);
+}
+.audio-menu .system-volume-container {
+  margin-top: var(--space-14);
+}
+.audio-menu .toggle-apps {
+  margin-left: var(--space-16);
+  margin-right: var(--space-2);
+  padding: var(--space-4) var(--space-8);
+  background-color: transparent;
+  border-radius: var(--default-border-radius-middle);
+  font-size: var(--default-icon-size);
+}
+.audio-menu .toggle-apps.expanded {
+  background-color: var(--default-surface-one-color);
+}
+.audio-menu .toggle-apps:hover {
+  background-color: var(--default-surface-zero-color);
+}
+.audio-menu .apps-container {
+  margin-top: var(--space-12);
+  padding: var(--space-6);
+  border-radius: var(--default-border-radius-middle);
+  background-color: var(--default-surface-zero-color);
+}
+.audio-menu .apps-container .app-volume .app-icon-container {
+  margin-right: var(--space-6);
+  padding: var(--space-8);
+  border-radius: var(--default-border-radius-middle);
+}
+.audio-menu .apps-container .app-volume .app-icon-container:hover {
+  background-color: var(--default-surface-two-color);
+}
+
+/* --------------------------- Power Menu Widget --------------------------- */
+.power-menu-widget {
+  margin-right: 0;
+  border-top-right-radius: var(--default-border-radius-edge);
+  border-bottom-right-radius: var(--default-border-radius-edge);
+}
+.power-menu-widget .label {
+  font-size: var(--default-icon-size);
+  color: var(--frappe-peach);
+}
+.power-menu-compact {
+  background-color: var(--default-base-color);
+  border-radius: var(--default-border-radius-modal);
+  max-width: 120px;
+}
+.power-menu-compact .buttons {
+  margin: var(--space-6);
+}
+.power-menu-compact .button {
+  padding: var(--space-6) var(--space-4);
+  background-color: transparent;
+  border: none;
+}
+.power-menu-compact .button.hover {
+  background-color: var(--default-surface-zero-color);
+}
+.power-menu-compact .button.lock.hover {
+  border-top-right-radius: var(--default-border-radius-middle);
+  border-top-left-radius: var(--default-border-radius-middle);
+}
+.power-menu-compact .button.shutdown.hover {
+  border-bottom-right-radius: var(--default-border-radius-middle);
+  border-bottom-left-radius: var(--default-border-radius-middle);
+}
+.power-menu-compact .button .icon {
+  padding-right: var(--space-8);
+  color: var(--default-text-two-color);
+}
+.power-menu-compact .button .label {
+  font-weight: 800;
+  color: var(--default-text-two-color);
+}
+.power-menu-compact .icon.hover,
+.power-menu-compact .label.hover {
+  color: var(--default-text-one-color);
+}

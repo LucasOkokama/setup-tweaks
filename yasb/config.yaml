@@ -1,0 +1,329 @@
+watch_stylesheet: true
+watch_config: true
+debug: false
+update_check: true
+komorebi:
+  start_command: "komorebic start --whkd"
+  stop_command: "komorebic stop --whkd"
+  reload_command: "komorebic stop --whkd && komorebic start --whkd"
+bars:
+  primary-bar:
+    enabled: true
+    screens: ["*"]
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+      align: "center"
+    animation:
+      enabled: true
+      duration: 400
+    blur_effect:
+      enabled: false
+      acrylic: false
+      dark_mode: false
+      round_corners: false
+      round_corners_type: "normal"
+      border_color: "system"
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+    dimensions:
+      width: "100%"
+      height: 32
+    padding:
+      top: 6
+      left: 4
+      bottom: 4
+      right: 4
+    widgets:
+      left:
+        - "super_start_menu"
+        - "komorebi_workspaces"
+        - "apps"
+        - "systray"
+        - "media"
+
+      center:
+        - "taskbar"
+        # - "active_window"
+
+      right:
+        - "memory"
+        - "cpu"
+        - "disk"
+        - "bin"
+        - "microphone"
+        - "volume"
+        - "clock"
+        - "power_menu"
+widgets:
+  super_start_menu:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "<span>\ue8e5</span>"
+      class_name: "super-start-menu-widget"
+      callbacks:
+        on_left: "exec start_menu"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
+
+  komorebi_workspaces:
+    type: "komorebi.workspaces.WorkspaceWidget"
+    options:
+      label_workspace_btn: "{index}"
+      label_workspace_active_btn: "{index}"
+      label_zero_index: false
+      hide_empty_workspaces: false
+      hide_if_offline: true
+      animation: false
+
+  apps:
+    type: "yasb.applications.ApplicationsWidget"
+    options:
+      label: "{data}"
+      app_list:
+        - { icon: "\udb80\udce0", launch: "quick_settings" }
+        - { icon: "\uf0f3", launch: "notification_center" }
+        - { icon: "\uf013", launch: "explorer.exe ms-settings:" }
+        - { icon: "\uf120", launch: "wt" }
+        - { icon: "\uf07c", launch: "explorer shell:Downloads" }
+        - {
+            icon: "\uf26b",
+            launch: "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+          }
+      tooltip: false
+      animation:
+        enabled: false
+
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: "\uf0da"
+      label_expanded: "\uf0d9"
+      icon_size: 14
+      show_unpinned_button: false
+      tooltip: false
+
+  media:
+    type: "yasb.media.MediaWidget"
+    options:
+      label: "{title}"
+      max_field_size:
+        label: 30
+        truncate_whole_label: true
+      show_thumbnail: true
+      thumbnail_alpha: 30
+      thumbnail_edge_fade: true
+      controls_hide: true
+      hide_empty: true
+      scrolling_label:
+        enabled: true
+        update_interval_ms: 60
+        style: "bounce"
+        label_padding: 50
+      media_menu:
+        blur: false
+        alignment: "center"
+        direction: "down"
+        offset_top: 12
+        offset_left: 0
+        thumbnail_size: 120
+        thumbnail_corner_radius: 10
+        max_title_size: 130
+        max_artist_size: 40
+        show_source: true
+      media_menu_icons:
+        {
+          play: "\udb81\udc0a",
+          pause: "\uead1",
+          prev_track: "\ue892",
+          next_track: "\ue893",
+        }
+      callbacks:
+        on_left: "toggle_play_pause"
+        on_middle: "do_nothing"
+        on_right: "toggle_media_menu"
+      animation:
+        enabled: false
+
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      show_only_visible: false
+      strict_filtering: true
+      tooltip: true
+      hide_empty: true
+      animation:
+        enabled: false
+      callbacks:
+        on_left: "toggle_window"
+        on_middle: "do_nothing"
+        on_right: "context_menu"
+
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    options:
+      label: "{win[title]}"
+      label_icon: true
+      label_icon_size: 16
+      max_length: 30
+      max_length_ellipsis: "..."
+      callbacks:
+        on_left: "do_nothing"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
+      rewrite:
+        - pattern: "^(.*)\\s-\\s[^-]+$"
+          replacement: "\\1"
+
+  memory:
+    type: "yasb.memory.MemoryWidget"
+    options:
+      label: "<span>\uf2db</span> {virtual_mem_used}"
+      label_alt: "<span>\uf2db</span> {virtual_mem_used}/{virtual_mem_total} ({virtual_mem_percent}%)"
+      update_interval: 60000
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "exec cmd /c Taskmgr"
+      animation:
+        enabled: false
+
+  cpu:
+    type: "yasb.cpu.CpuWidget"
+    options:
+      label: "<span>\uec04</span> {info[percent][total]}%"
+      label_alt: "<span>\uf4bc</span> {info[freq][current]}MHz"
+      update_interval: 60000
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "exec cmd /c Taskmgr"
+      animation:
+        enabled: false
+
+  disk:
+    type: "yasb.disk.DiskWidget"
+    options:
+      label: "<span>\ue5ff</span> {volume_label} {space[used][percent]}"
+      label_alt: "<span>\ue5ff</span> {volume_label} {space[used][gb]} / {space[total][gb]}"
+      volume_label: "C"
+      decimal_display: 1
+      update_interval: 60
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "exec cmd /c start ms-settings:appsfeatures"
+      animation:
+        enabled: false
+
+  bin:
+    type: "yasb.recycle_bin.RecycleBinWidget"
+    options:
+      label: "<span>{icon} </span> {items_count}"
+      label_alt: "<span>{icon} </span> Items {items_count} ({items_size})"
+      icons:
+        bin_empty: "\uf1f8"
+        bin_filled: "\uf1f8"
+      tooltip: false
+      animation:
+        enabled: false
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "open_bin"
+
+  microphone:
+    type: "yasb.microphone.MicrophoneWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      mute_text: "--"
+      scroll_step: 1
+      tooltip: false
+      icons:
+        normal: "\uf130"
+        muted: "\uf131"
+      mic_menu:
+        alignment: "center"
+        direction: "down"
+        offset_top: 12
+        offset_left: 0
+      callbacks:
+        on_left: "toggle_mute"
+        on_middle: "do_nothing"
+        on_right: "toggle_mic_menu"
+      animation:
+        enabled: false
+
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      mute_text: "--"
+      scroll_step: 1
+      tooltip: false
+      volume_icons:
+        - "\ueee8" # Icon for muted
+        - "\uf027" # 0-10% volume
+        - "\uf027" # 11-30% volume
+        - "\uf027" # 31-60% volume
+        - "\uf027" # 61-100% volume
+      audio_menu:
+        alignment: "center"
+        direction: "down"
+        offset_top: 12
+        offset_left: 0
+        show_apps: true
+        show_app_icons: true
+        show_apps_expanded: true
+        app_icons:
+          toggle_down: "\uf078"
+          toggle_up: "\uf077"
+      callbacks:
+        on_left: "toggle_mute"
+        on_middle: "do_nothing"
+        on_right: "toggle_volume_menu"
+      animation:
+        enabled: false
+
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%H:%M:%S   %d-%m-%Y}"
+      label_alt: "{%A, %d %b %Y}"
+      locale: "en-US"
+      update_interval: 1000
+      alarm_icons:
+        enabled: "\uf0f3"
+        disabled: "\uf0a2"
+        snooze: "\uf1f6"
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "do_nothing"
+        on_right: "do_nothing"
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      tooltip: false
+      animation:
+        enabled: false
+
+  power_menu:
+    type: "yasb.power_menu.PowerMenuWidget"
+    options:
+      label: "\udb82\udd04"
+      menu_style: "popup"
+      popup:
+        alignment: "right"
+        direction: "down"
+        offset_top: 12
+        offset_left: -4
+        blur: false
+      buttons:
+        lock: ["\uf456", "Lock"]
+        restart: ["\uead2", "Restart"]
+        shutdown: ["\uf011", "Shut Down"]
+        cancel: ["", "Cancel"]
