@@ -305,3 +305,132 @@ and code readability.
 | Highlight Trailing White Spaces | Highlights trailing whitespace in files           | [**_`Download`_**](https://marketplace.visualstudio.com/items/?itemName=ybaumes.highlight-trailing-white-spaces) |
 | indent-rainbow                  | Colors indentation levels for better readability  | [**_`Download`_**](https://marketplace.visualstudio.com/items/?itemName=oderwat.indent-rainbow)                  |
 | WakaTime                        | Tracks coding activity and time spent on projects | [**_`Download`_**](https://marketplace.visualstudio.com/items/?itemName=WakaTime.vscode-wakatime)                |
+
+<!-- --- --- YASB --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
+
+## YASB - Yet Another Status Bar
+
+### Overview
+
+[**_`YASB (Yet Another Status Bar)`_**](https://github.com/amnweb/yasb) is a
+**customizable status bar for Windows** that displays system information and
+dynamic data directly on the desktop. It is lightweight, flexible, and
+configurable through external configuration files, allowing users to tailor the
+layout, styling, and displayed information, including system metrics and
+external data sources.
+
+To install YASB, **download the latest release from the official repository or a
+package manager**, then follow the setup instructions in the
+[**_`documentation`_**](https://docs.yasb.dev/latest/installation). The
+installation process generally requires extracting the files, executing the
+application, and configuring it according to your system specifications.
+
+### Configurations
+
+You can access my configuration file here:
+
+- [**_`config.yaml`_**](./yasb/config.yaml)
+- [**_`style.css`_**](./yasb/styles.css)
+
+YASB is configured through a
+[**_`YAML file (default)`_**](https://github.com/amnweb/yasb/blob/main/src/config.yaml)
+that uses simple key value pairs organized by indentation, with nested settings
+structured hierarchically to group related options under broader categories. In
+addition to the configuration file, YASB also uses a
+[**_`CSS file (default)`_**](https://github.com/amnweb/yasb/blob/main/src/styles.css)
+to define the visual appearance of the bar, including colors, spacing, fonts,
+and overall layout.
+
+YASB provides many configuration options for customizing its
+[**_`behavior`_**](https://docs.yasb.dev/latest/configuration),
+[**_`keybinds`_**](https://docs.yasb.dev/latest/keybindings) and
+[**_`appearance`_**](https://docs.yasb.dev/latest/styling). In this guide, I
+will focus on the most important components, the **widgets**, as they are the
+core elements of the interface.
+
+The [**_`widgets`_**](https://docs.yasb.dev/latest/widgets/active-windows-title)
+present in my configuration are:
+
+| Widget Name               | Description                                                                                |
+| ------------------------- | ------------------------------------------------------------------------------------------ |
+| Custom (Super Start Menu) | Custom start menu button that triggers the system start menu when left-clicked.            |
+| Komorebi Workspaces       | Displays Komorebi workspaces and allows switching between them.                            |
+| Applications              | Shows custom application shortcuts with clickable icons for launching predefined apps.     |
+| Systray                   | Displays the system tray with background applications and status icons.                    |
+| Media                     | Shows current media playback information with optional controls and dropdown media menu.   |
+| Taskbar                   | Displays open windows and allows interaction such as toggling or opening the context menu. |
+| Memory                    | Shows current memory usage with an alternative detailed view toggle.                       |
+| CPU                       | Displays CPU usage percentage with optional frequency view.                                |
+| Disk                      | Shows disk usage information for a specified volume.                                       |
+| Recycle Bin               | Displays recycle bin status including item count and size.                                 |
+| Microphone                | Shows microphone level and mute status with a dropdown device menu.                        |
+| Volume                    | Displays system volume level with mute toggle and expandable audio menu.                   |
+| Clock                     | Shows current time and date with an alternate format toggle.                               |
+| Power Menu                | Provides a popup menu with power options such as lock, restart, and shutdown.              |
+
+> [!NOTE]
+
+> Most animations and tooltips are disabled!
+
+### Inpirations
+
+The design of YASB was created entirely from scratch, handcrafted without
+copying anyone else's code. **While the implementation is original, the visual
+style was inspired by a few existing themes and concepts**. The table below
+highlights some of the key inspirations that influenced the look and feel of
+YASB.
+
+| Theme Name        | Visual Appearance                                                                                                      | Theme Source                                                                                                      |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Spectrum Symphony | [**_`Image`_**](https://github.com/amnweb/yasb-themes/blob/main/themes/edb987a6-0df1-43c6-b274-0393bf469bf1/image.png) | [**_`Repository`_**](https://github.com/amnweb/yasb-themes/tree/main/themes/edb987a6-0df1-43c6-b274-0393bf469bf1) |
+| Soft Segment      | [**_`Image`_**](https://github.com/amnweb/yasb-themes/blob/main/themes/f60c809d-1378-4042-9f11-46d0e9c37cf5/image.png) | [**_`Repository`_**](https://github.com/amnweb/yasb-themes/tree/main/themes/f60c809d-1378-4042-9f11-46d0e9c37cf5) |
+| Pillbox           | [**_`Image`_**](https://github.com/amnweb/yasb-themes/blob/main/themes/e675b585-4fad-4056-89ba-e318faeadab5/image.png) | [**_`Repository`_**](https://github.com/amnweb/yasb-themes/tree/main/themes/e675b585-4fad-4056-89ba-e318faeadab5) |
+| Fluent Onyx       | [**_`Image`_**](https://github.com/amnweb/yasb-themes/blob/main/themes/80198c48-f70a-44a1-8507-ce300ff8e360/image.png) | [**_`Repository`_**](https://github.com/amnweb/yasb-themes/tree/main/themes/80198c48-f70a-44a1-8507-ce300ff8e360) |
+
+In addition to the visual inspirations listed above, the color palette of YASB
+was primarily based on the [**_`Catppuccin`_**](https://catppuccin.com/palette/)
+theme, and its official
+[**_`style guide`_**](https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md)
+was also used as a reference. This combination provides a soft and harmonious
+range of tones that enhances readability and ensures overall aesthetic
+consistency.
+
+### Tips
+
+#### Comunity Themes
+
+If you want, **you can customize YASB by editing the configuration files to suit
+your own needs and preferences**. For those who prefer ready-made visuals, there
+is also a repository of
+[**_`community-made themes`_**](https://github.com/amnweb/yasb-themes) that you
+can download. Applying a theme from the repository changes the entire appearance
+of YASB instantly, without needing to modify any code.
+
+#### UWP
+
+In the yasb configuration file, you can set icons for each widget using Unicode
+codes like `\uf1f8`, `\uec04`, or `\uf4bc`. These codes represent **glyphs from
+an icon font**, often provided by patched fonts like
+[**_`Nerd Fonts`_**](https://www.nerdfonts.com/), allowing the widget to display
+a symbol alongside dynamic information such as CPU usage, disk space, or recycle
+bin status. Wrapping the code in a <span> tag ensures it renders correctly, and
+you can switch to alternate labels using mouse actions.
+
+[**_`UWP (Universal Windows Platform)`_**](https://github.com/character-map-uwp/Character-Map-UWP)
+provides a modern, native replacement for traditional Win32 tools like the
+Character Map and Windows Font Viewer. With full high-DPI and touch support,
+**it lets you easily browse and select icons**, ensuring your status bar symbols
+are consistent with Windows without relying on external fonts.
+
+### Known Issues
+
+**YASB is generally stable**, but on Windows it may cause minor issues like
+taskbar conflicts or unexpected widget behavior. Windows updates can affect
+windows, the taskbar, or visual effects. High-frequency updates or animations
+may slightly impact performance on older hardware. Always back up your
+configuration and monitor system behavior.
+
+> [!WARNING]
+
+> Many common issues are already explained or resolved in the
+> [**_`FAQ`_**](https://docs.yasb.dev/latest/faq)
