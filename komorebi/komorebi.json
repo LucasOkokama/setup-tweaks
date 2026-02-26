@@ -1,0 +1,92 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.40/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "window_handling_behaviour": "Async",
+  "cross_monitor_move_behaviour": "Insert",
+  "global_work_area_offset": { "top": -4, "right": 0, "bottom": -4, "left": 0 },
+  "default_workspace_padding": 4,
+  "default_container_padding": 2,
+  "mouse_follows_focus": false,
+  "resize_delta": 35,
+  "window_container_behaviour": "Append",
+  "transparency": true,
+  "transparency_alpha": 240,
+  "transparency_ignore_rules": [
+    {
+      "kind": "Exe",
+      "id": "brave.exe"
+    }
+  ],
+  "border": true,
+  "border_implementation": "Komorebi",
+  "border_width": 3,
+  "border_offset": -1,
+  "border_style": "Rounded",
+  "border_colours": {
+    "single": "#40a02b",
+    "stack": "#d20f39",
+    "monocle": "#df8e1d",
+    "unfocused": "#4c4f69",
+    "floating": "#04a5e5",
+    "unfocused-locked": "#4c4f69"
+  },
+  "stackbar": {
+    "height": 20,
+    "mode": "OnStack",
+    "tabs": {
+      "width": 200,
+      "focused_text": "#adadad",
+      "unfocused_text": "#6B7074",
+      "background": "#1F1F1F",
+      "font_family": "JetBrains Mono",
+      "font_size": 16
+    }
+  },
+  "float_override": false,
+  "float_override_placement": "Center",
+  "toggle_float_placement": "CenterAndResize",
+  "floating_applications": [
+    {
+      "kind": "Title",
+      "id": "DevTools",
+      "matching_strategy": "Contains"
+    }
+  ],
+  "float_rule_placement": "Center",
+  "floating_layer_placement": "CenterAndResize",
+  "floating_layer_behaviour": "Tile",
+  "floating_window_aspect_ratio": "Ultrawide",
+  "ignore_rules": [],
+  "manage_rules": [],
+  "layered_applications": [],
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "UltrawideVerticalStack"
+        },
+        {
+          "name": "II",
+          "layout": "UltrawideVerticalStack"
+        },
+        {
+          "name": "III",
+          "layout": "UltrawideVerticalStack"
+        },
+        {
+          "name": "IV",
+          "layout": "UltrawideVerticalStack"
+        },
+        {
+          "name": "V",
+          "layout": "UltrawideVerticalStack"
+        },
+        {
+          "name": "VI"
+        }
+      ]
+    }
+  ]
+}
