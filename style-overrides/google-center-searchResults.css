@@ -1,0 +1,59 @@
+/*
+  # Download "Stylus" Chrome extension [https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne].
+  # Open the extensions and click "Manage"
+  # Click on "Write new style or "+" sign
+  # Give a name to the set of CSS code that you just created
+  # Paste the CSS in the code area
+  # Above the code area select "URLs starting with" and type "https://www.google.com" next to it or whatever webite it shoud work
+  # Hit the button "Save" or Ctrl + S
+*/
+
+/* Center all content horizontally on the page */
+html {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* Limit the main page width to 60% */
+body {
+  width: 60% !important;
+}
+
+/*
+Center the floating search bar (appears when scrolling down).
+*/
+.CTOaxb {
+  position: fixed !important;
+  width: 60% !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 auto !important;
+}
+
+/*
+Prevent the search bar from expanding excessively when it receives focus.
+*/
+.emcav.A8SBwf.pD4qTd {
+  width: auto !important;
+}
+
+/*
+Remove the "People also search for" section that appears inside the search area.
+*/
+.rLrQHf {
+  display: none !important;
+}
+
+/*
+Hide the "AI Mode" option from the top menu bar.
+*/
+.olrp5b {
+  display: none !important;
+}
+
+/*
+Hide the footer section from the page.
+*/
+#sfooter {
+  display: none !important;
+}
