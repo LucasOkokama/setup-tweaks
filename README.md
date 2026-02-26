@@ -48,14 +48,17 @@ reference implementation rather than a prescriptive standard**.
 > configuration decision.
 <!-- prettier-ignore-end -->
 
+<br>
+
 # Table of Contents
 
-- [Browser Extensions](#browser-extensions)
 - [Komorebi](#komorebi)
 - [Style Overrides](#style-overrides)
 - [VS Code](#vs-code)
-- [Windows Debloat Install](#windows-debloat-install)
 - [YASB - Yet Another Status Bar](#yasb---yet-another-status-bar)
+
+<br>
+<br>
 
 <!-- --- --- Komorebi --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
 
@@ -198,6 +201,9 @@ updates often improve stability and performance.
 > [**`documentations`**](https://komorebi-starlight.lgug2z.workers.dev/guides/known-issues/)
 <!-- prettier-ignore-end -->
 
+<br>
+<br>
+
 <!-- --- --- Style Overrides --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
 
 ## Style Overrides
@@ -252,6 +258,9 @@ Since these styles are injected via CSS, some page elements might not display
 correctly or could behave unexpectedly. If you encounter any issues, you can
 easily resolve them by disabling Stylus or any other extension that injects
 custom CSS into pages.
+
+<br>
+<br>
 
 <!-- --- --- VS Code --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
 
@@ -309,6 +318,9 @@ and code readability.
 | Highlight Trailing White Spaces | Highlights trailing whitespace in files           | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=ybaumes.highlight-trailing-white-spaces) |
 | indent-rainbow                  | Colors indentation levels for better readability  | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=oderwat.indent-rainbow)                  |
 | WakaTime                        | Tracks coding activity and time spent on projects | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=WakaTime.vscode-wakatime)                |
+
+<br>
+<br>
 
 <!-- --- --- YASB --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
 
