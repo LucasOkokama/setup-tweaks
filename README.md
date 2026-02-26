@@ -248,3 +248,60 @@ Since these styles are injected via CSS, some page elements might not display
 correctly or could behave unexpectedly. If you encounter any issues, you can
 easily resolve them by disabling Stylus or any other extension that injects
 custom CSS into pages.
+
+<!-- --- --- VS Code --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
+
+## VS Code
+
+### Overview
+
+[**_`VS Code`_**](https://code.visualstudio.com/) is a **lightweight,
+cross-platform code editor developed by Microsoft**. It supports multiple
+programming languages, has a powerful extension ecosystem, and provides built-in
+tools like debugging, Git integration, and a terminal, making it a versatile
+environment for both development and everyday coding tasks.
+
+You can download VS Code directly from its
+[**_`official website`_**](https://code.visualstudio.com/Download). Installation
+is straightforward: **choose your operating system, run the installer, and
+follow the prompts**. Once installed, you can launch the editor immediately and
+start coding.
+
+### Configurations
+
+You can access my configuration file here:
+
+- [**_`settings.json`_**](./vscode/settings.json)
+
+In VS Code,
+[**_`settings.json`_**](https://code.visualstudio.com/docs/configure/settings)
+is the main configuration file where **you can customize the editor’s appearance
+and behavior, including themes, fonts, tab size, auto-save, and
+language-specific settings**. This file gives you full control over VS Code,
+allowing you to tailor both how it looks and how it responds to your workflow.
+
+In order for the settings to work properly, **install the following extensions**
+(if you don’t want to use any of them, simply remove them from the
+`settings.json` file):
+
+| Name                      | Functionality                                       | Download Link                                                                                               |
+| ------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Git Bash                  | Terminal shell for Git commands on Windows          | [**_`Download`_**](https://git-scm.com/downloads)                                                           |
+| JetBrains Mono            | Programming font used in editor and terminal        | [**_`Download`_**](https://www.jetbrains.com/lp/mono/)                                                      |
+| Error Lens                | Highlights errors and warnings inline in the editor | [**_`Download`_**](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)                |
+| Bearded Icons             | Icon theme for VS Code                              | [**_`Download`_**](https://marketplace.visualstudio.com/items/?itemName=BeardedBear.beardedicons)           |
+| Mayukai Mono              | VS Code color theme                                 | [**_`Download`_**](https://marketplace.visualstudio.com/items/?itemName=GulajavaMinistudio.mayukaithemevsc) |
+| Prettier - Code formatter | Formats code automatically according to style rules | [**_`Download`_**](https://marketplace.visualstudio.com/items/?itemName=esbenp.prettier-vscode)             |
+| Red Hat YAML              | YAML language support and formatter                 | [**_`Download`_**](https://marketplace.visualstudio.com/items/?itemName=redhat.vscode-yaml)                 |
+
+## Tips
+
+The following extensions are not included in the s`ettings.json` configuration,
+but I highly recommend them as they are very useful for improving productivity
+and code readability.
+
+| Name                            | Functionality                                     | Download Link                                                                                                    |
+| ------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Highlight Trailing White Spaces | Highlights trailing whitespace in files           | [**_`Download`_**](https://marketplace.visualstudio.com/items/?itemName=ybaumes.highlight-trailing-white-spaces) |
+| indent-rainbow                  | Colors indentation levels for better readability  | [**_`Download`_**](https://marketplace.visualstudio.com/items/?itemName=oderwat.indent-rainbow)                  |
+| WakaTime                        | Tracks coding activity and time spent on projects | [**_`Download`_**](https://marketplace.visualstudio.com/items/?itemName=WakaTime.vscode-wakatime)                |
