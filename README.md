@@ -309,7 +309,7 @@ In order for the settings to work properly, **install the following extensions**
 
 ## Tips
 
-The following extensions are not included in the s`ettings.json` configuration,
+The following extensions are not included in the `settings.json` configuration,
 but I highly recommend them as they are very useful for improving productivity
 and code readability.
 
