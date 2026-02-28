@@ -64,6 +64,8 @@ reference implementation rather than a prescriptive standard**.
 
 ## Komorebi
 
+![PREVIEW](./komorebi/preview.png)
+
 ### Overview
 
 [**`Komorebi`**](https://github.com/LGUG2Z/komorebi) **is a tiling window
@@ -236,7 +238,9 @@ style and configuring it for the desired website**:
 You can access my configuration file here:
 
 - [**`google-center-searchResults.css`**](./style-overrides/google-center-searchResults.css)
+  ([**`PREVIEW`**](./style-overrides/preview-google.png))
 - [**`youtube-center-commentsSection.css`**](./style-overrides/youtube-center-commentsSection.css)
+  ([**`PREVIEW`**](./style-overrides/preview-youtube.png))
 
 #### Google Center Search Results
 
@@ -266,6 +270,8 @@ custom CSS into pages.
 
 ## VS Code
 
+![PREVIEW](./vscode/preview.png)
+
 ### Overview
 
 [**`VS Code`**](https://code.visualstudio.com/) is a **lightweight,
@@ -287,8 +293,8 @@ You can access my configuration file here:
 - [**`settings.json`**](./vscode/settings.json)
 
 In VS Code,
-[**`settings.json`**](https://code.visualstudio.com/docs/configure/settings)
-is the main configuration file where **you can customize the editor’s appearance
+[**`settings.json`**](https://code.visualstudio.com/docs/configure/settings) is
+the main configuration file where **you can customize the editor’s appearance
 and behavior, including themes, fonts, tab size, auto-save, and
 language-specific settings**. This file gives you full control over VS Code,
 allowing you to tailor both how it looks and how it responds to your workflow.
@@ -297,8 +303,8 @@ In order for the settings to work properly, **install the following extensions**
 (if you don’t want to use any of them, simply remove them from the
 `settings.json` file):
 
-| Name                      | Functionality                                       | Download Link                                                                                               |
-| ------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Name                      | Functionality                                       | Download Link                                                                                             |
+| ------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | Git Bash                  | Terminal shell for Git commands on Windows          | [**`Download`**](https://git-scm.com/downloads)                                                           |
 | JetBrains Mono            | Programming font used in editor and terminal        | [**`Download`**](https://www.jetbrains.com/lp/mono/)                                                      |
 | Error Lens                | Highlights errors and warnings inline in the editor | [**`Download`**](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)                |
@@ -313,8 +319,8 @@ The following extensions are not included in the `settings.json` configuration,
 but I highly recommend them as they are very useful for improving productivity
 and code readability.
 
-| Name                            | Functionality                                     | Download Link                                                                                                    |
-| ------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Name                            | Functionality                                     | Download Link                                                                                                  |
+| ------------------------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | Highlight Trailing White Spaces | Highlights trailing whitespace in files           | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=ybaumes.highlight-trailing-white-spaces) |
 | indent-rainbow                  | Colors indentation levels for better readability  | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=oderwat.indent-rainbow)                  |
 | WakaTime                        | Tracks coding activity and time spent on projects | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=WakaTime.vscode-wakatime)                |
@@ -325,6 +331,8 @@ and code readability.
 <!-- --- --- YASB --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
 
 ## YASB - Yet Another Status Bar
+
+![PREVIEW](./yasb/preview.png)
 
 ### Overview
 
@@ -360,9 +368,9 @@ and overall layout.
 YASB provides many configuration options for customizing its
 [**`behavior`**](https://docs.yasb.dev/latest/configuration),
 [**`keybinds`**](https://docs.yasb.dev/latest/keybindings) and
-[**`appearance`**](https://docs.yasb.dev/latest/styling). In this guide, I
-will focus on the most important components, the **widgets**, as they are the
-core elements of the interface.
+[**`appearance`**](https://docs.yasb.dev/latest/styling). In this guide, I will
+focus on the most important components, the **widgets**, as they are the core
+elements of the interface.
 
 The [**`widgets`**](https://docs.yasb.dev/latest/widgets/active-windows-title)
 present in my configuration are:
@@ -397,8 +405,8 @@ style was inspired by a few existing themes and concepts**. The table below
 highlights some of the key inspirations that influenced the look and feel of
 YASB.
 
-| Theme Name        | Visual Appearance                                                                                                      | Theme Source                                                                                                      |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Theme Name        | Visual Appearance                                                                                                    | Theme Source                                                                                                    |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Spectrum Symphony | [**`Image`**](https://github.com/amnweb/yasb-themes/blob/main/themes/edb987a6-0df1-43c6-b274-0393bf469bf1/image.png) | [**`Repository`**](https://github.com/amnweb/yasb-themes/tree/main/themes/edb987a6-0df1-43c6-b274-0393bf469bf1) |
 | Soft Segment      | [**`Image`**](https://github.com/amnweb/yasb-themes/blob/main/themes/f60c809d-1378-4042-9f11-46d0e9c37cf5/image.png) | [**`Repository`**](https://github.com/amnweb/yasb-themes/tree/main/themes/f60c809d-1378-4042-9f11-46d0e9c37cf5) |
 | Pillbox           | [**`Image`**](https://github.com/amnweb/yasb-themes/blob/main/themes/e675b585-4fad-4056-89ba-e318faeadab5/image.png) | [**`Repository`**](https://github.com/amnweb/yasb-themes/tree/main/themes/e675b585-4fad-4056-89ba-e318faeadab5) |
@@ -428,8 +436,8 @@ of YASB instantly, without needing to modify any code.
 In the yasb configuration file, you can set icons for each widget using Unicode
 codes like `\uf1f8`, `\uec04`, or `\uf4bc`. These codes represent **glyphs from
 an icon font**, often provided by patched fonts like
-[**`Nerd Fonts`**](https://www.nerdfonts.com/), allowing the widget to display
-a symbol alongside dynamic information such as CPU usage, disk space, or recycle
+[**`Nerd Fonts`**](https://www.nerdfonts.com/), allowing the widget to display a
+symbol alongside dynamic information such as CPU usage, disk space, or recycle
 bin status. Wrapping the code in a <span> tag ensures it renders correctly, and
 you can switch to alternate labels using mouse actions.
 
