@@ -52,10 +52,160 @@ reference implementation rather than a prescriptive standard**.
 
 # Table of Contents
 
+- [CLI](#cli)
 - [Komorebi](#komorebi)
 - [Style Overrides](#style-overrides)
 - [VS Code](#vs-code)
 - [YASB - Yet Another Status Bar](#yasb---yet-another-status-bar)
+
+<br>
+<br>
+
+<!-- --- --- CLI --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
+
+## CLI
+
+![PREVIEW](./cli/preview.png)
+
+### Overview
+
+The
+[**`command-line interface`**](https://wikipedia.org/wiki/Command-line_interface)
+is a central component of the development workflow, and small adjustments to its
+appearance and behavior can significantly improve readability and overall
+efficiency. This section documents a **set of lightweight customizations for
+[**`Windows Terminal`**](https://learn.microsoft.com/windows/terminal/) and
+[**`Windows PowerShell`**](https://learn.microsoft.com/powershell/scripting/overview),
+focusing on elements such as color schemes, font configuration, prompt
+structure, and general terminal behavior**. The intention is to create a cleaner
+and more consistent terminal environment while keeping the setup simple,
+portable, and easy to reproduce across systems.
+
+Configuration in this section includes setting up PowerShell, applying Windows
+Terminal themes, installing
+[**`Nerd Fonts`**](https://github.com/ryanoasis/nerd-fonts) for extended glyph
+support, customizing the prompt with
+[**`Oh My Posh`**](https://github.com/jandedobbeleer/oh-my-posh), displaying
+system information with
+[**`FastFetch`**](https://github.com/fastfetch-cli/fastfetch), and enhancing
+folder and file visualization using
+[**`Terminal Icons`**](https://github.com/devblackops/Terminal-Icons). Detailed
+installation and configuration steps are documented separately to keep this
+section concise. **See [**`Installation Guide`**](./cli/installation.md) for the
+full setup process**.
+
+### Configurations
+
+You can access my configuration file here:
+
+- [**`pwsh-defaults.json`**](./cli/pwsh-defaults.json)
+- [**`pwsh-general.json`**](./cli/pwsh-general.json)
+- [**`pwsh-scheme.json`**](./cli/pwsh-scheme.json)
+- [**`ohmyposh-theme.json`**](./cli/ohmyposh-theme.json)
+- [**`fastfetch-config.jsonc`**](./cli/fastfetch-config.jsonc)
+
+The CLI setup uses a few `JSON` files, **each handling a specific aspect of
+terminal behavior, appearance, or profile settings** for easy management and
+portability:
+
+- `Defaults configuration`: Defines global terminal settings, including color
+  scheme, font, cursor style, opacity, padding, and window behavior. These
+  defaults apply to all profiles to ensure a consistent environment.
+
+- `Profile adjustments`: Contains profile-specific settings such as command line
+  arguments, tab layout, and session behavior, allowing finer control over
+  individual terminal sessions.
+
+- `Color scheme`: Stores the terminal’s color palette, controlling foreground,
+  background, cursor, and selection colors. This file can be swapped or modified
+  to change the visual appearance without affecting other configurations.
+
+Prompt customization is handled via Oh My Posh, **initialized through the
+PowerShell profile ($PROFILE)**. The profile loads a **theme JSON stored
+locally**, which defines the segments and visual structure of the prompt. This
+setup ensures that every new shell session automatically applies the configured
+prompt and visual elements.
+
+FastFetch configuration works similarly and also uses a **JSON-based format**.
+It defines which modules are shown, their layout, and styling. You can use
+pre-made presets or customize it manually to adjust the information and
+appearance displayed in the terminal
+
+### Inpirations
+
+The prompt design for Oh My Posh in this setup was **created from scratch, but
+its structure and segment layout were guided by existing examples for practical
+reference**. The [**`YS Theme`**](https://ohmyposh.dev/docs/themes#ys) served as
+a key inspiration, providing a clear and organized approach to segment
+placement, symbols, and overall prompt flow.
+
+For the color palette, inspiration came from the
+[**`Catppuccin`**](https://catppuccin.com/palette/) theme, whose soft and
+balanced tones were used as a reference to ensure readability and visual harmony
+across the prompt. Combining these influences allowed the prompt to maintain
+both a functional structure and an appealing, consistent aesthetic.
+
+The FastFetch configuration was also **inspired by existing presets**. Its
+layout and module arrangement took cues from organized examples in the
+[**FastFetch Presets**](https://github.com/fastfetch-cli/fastfetch/tree/dev/presets/examples)
+repository. These references helped create a setup that is both functional and
+visually cohesive.
+
+| Theme Name | Theme Source                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------- |
+| Theme 26   | [**`Repository`**](https://github.com/fastfetch-cli/fastfetch/blob/dev/presets/examples/26.jsonc) |
+| Theme 10   | [**`Repository`**](https://github.com/fastfetch-cli/fastfetch/blob/dev/presets/examples/10.jsonc) |
+| Theme 6    | [**`Repository`**](https://github.com/fastfetch-cli/fastfetch/blob/dev/presets/examples/6.jsonc)  |
+
+### Tips
+
+If you wish to explore additional pre-made themes, you can find ready-to-use
+color schemes for **Windows Terminal** on the
+[**`Windows Terminal Themes`**](https://windowsterminalthemes.dev) website.
+These themes can be applied directly to your terminal or used as inspiration to
+create your own custom color scheme.
+
+For **Oh My Posh** prompts, a variety of themes are available on the
+[**`Oh My Posh Themes`**](https://ohmyposh.dev/docs/themes) page. You can
+download these themes or adapt them to customize the appearance and layout of
+your prompt.
+
+Pre-made themes are also available on the
+[**`FastFetch Presets`**](https://github.com/fastfetch-cli/fastfetch/tree/dev/presets/examples)
+page. These presets let you quickly customize the information displayed in your
+terminal. Instead of creating a configuration from scratch, you can use an
+existing preset as a base and modify it to match your preferred layout, colors,
+and modules.
+
+Some users may choose to install
+[**`PowerShell 7`**](https://learn.microsoft.com/powershell/scripting/install/install-powershell-on-windows)
+for improved performance, cross-platform compatibility, and access to the latest
+features. Once installed, all terminal configurations, Oh My Posh themes, and
+font settings can be applied directly in PowerShell 7 instead of the traditional
+Windows PowerShell:
+
+```powershell
+winget install --id Microsoft.PowerShell --source winget
+```
+
+### Known Issues
+
+While this CLI configuration provides a streamlined and visually consistent
+environment, there are some limitations to be aware of. Certain color or font
+settings may render differently depending on the terminal version or system
+display scaling.
+
+Oh My Posh prompt themes rely on the profile loading correctly. If the
+PowerShell execution policy restricts script running, the prompt may fail to
+initialize until the policy is adjusted. Similarly, Fastfetch output can vary
+depending on the system's hardware, OS version, or installed permissions, and
+some sections may not display if required system information is unavailable.
+Using Fastfetch ensures a quick system summary, but its appearance may change
+across different setups.
+
+Finally, updates to Windows Terminal, PowerShell, or Oh My Posh may occasionally
+introduce changes that require reapplying or adjusting these configuration files
+to maintain full compatibility, including any Fastfetch customizations.
 
 <br>
 <br>
@@ -183,7 +333,7 @@ To determine the correct OEM value, use the
 virtual-key code associated with each key in a specific keyboard layout.
 
 For reference, consult the official Microsoft documentation for the
-[**`United States Keyboard Layout`**](https://learn.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes)
+[**`United States Keyboard Layout`**](https://learn.microsoft.com/windows/win32/inputdev/virtual-key-codes)
 to review the standard virtual-key definitions. If you are working with a
 different keyboard layout, such as
 the[**`Brazilian Keyboard Layout (ABNT2)`**](https://kbdlayout.info/KBDBR/virtualkeys),

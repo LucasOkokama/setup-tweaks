@@ -1,0 +1,18 @@
+{
+  "defaults": {
+    "colorScheme": "flexoki-dark",
+    "cursorShape": "underscore",
+    "font": {
+      "cellHeight": "1.75",
+      "cellWidth": "0.7",
+      "face": "JetBrainsMono Nerd Font",
+      "size": 8,
+      "weight": "normal"
+    },
+    "intenseTextStyle": "bright",
+    "opacity": 95,
+    "padding": "16",
+    "scrollbarState": "visible",
+    "useAcrylic": false
+  }
+}

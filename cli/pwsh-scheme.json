@@ -1,0 +1,27 @@
+{
+  "schemes": [
+    {
+      "name": "flexoki-dark",
+      "background": "#1C1B1A",
+      "black": "#1C1B1A",
+      "blue": "#4385BE",
+      "brightBlack": "#575653",
+      "brightBlue": "#4385BE",
+      "brightCyan": "#3AA99F",
+      "brightGreen": "#879A39",
+      "brightPurple": "#CE5D97",
+      "brightRed": "#D14D41",
+      "brightWhite": "#CECDC3",
+      "brightYellow": "#D0A215",
+      "cursorColor": "#CECDC3",
+      "cyan": "#3AA99F",
+      "foreground": "#CECDC3",
+      "green": "#879A39",
+      "purple": "#CE5D97",
+      "red": "#D14D41",
+      "selectionBackground": "#CECDC3",
+      "white": "#B7B5AC",
+      "yellow": "#D0A215"
+    }
+  ]
+}

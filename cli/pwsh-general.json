@@ -1,0 +1,8 @@
+{
+  "initialCols": 140,
+  "initialRows": 50,
+  "theme": "dark",
+  "useAcrylicInTabRow": true,
+  "tabWidthMode": "compact",
+  "windowingBehavior": "useNew"
+}

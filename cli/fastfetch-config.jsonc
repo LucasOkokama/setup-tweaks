@@ -1,0 +1,194 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "windows",
+    "padding": {
+      "top": 3,
+      "left": 3,
+    },
+  },
+  "display": {
+    "separator": "",
+    "constants": [
+      // {$1}
+      "\u001b[90m│                                                                                  │\u001b[82D\u001b[39m",
+      // ${2}
+      "─────────────────────────────────────────────────",
+    ],
+  },
+  "modules": [
+    // Header
+    {
+      "type": "title",
+      "format": "{#bright_black}┌{$2}{$2}┐",
+    },
+    {
+      "type": "title",
+      "format": "                                           {#cyan}{full-user-name} {#bright_black}[{pid}]",
+    },
+    {
+      "type": "title",
+      "format": "{#bright_black}└{$2}{$2}┘",
+    },
+    {
+      "type": "title",
+      "key": "{#bright_black}╭ Keys ─────────╮",
+      "format": "{#bright_black}╭ Values ──────────────────────────────────────────────────────────────────────────╮",
+    },
+
+    // Profile
+    {
+      "type": "title",
+      "key": "{#bright_black}│ {#bright_blue}Profile       {#bright_black}│",
+      "format": "{$1}",
+    },
+    {
+      "type": "title",
+      "key": "{#bright_black}│ {#bright_blue}├─ User      {#bright_black}│",
+      "format": "{$1}{user-name} {#bright_black}[{home-dir}]",
+    },
+
+    {
+      "type": "title",
+      "key": "{#bright_black}│ {#bright_blue}├─󰌢 Host      {#bright_black}│",
+      "format": "{$1}{host-name}",
+    },
+    {
+      "type": "host",
+      "key": "{#bright_black}│ {#bright_blue}├─ Machine   {#bright_black}│",
+      "format": "{$1}{name} {version}",
+    },
+    {
+      "type": "uptime",
+      "key": "{#bright_black}│ {#bright_blue}╰─󰅐 Uptime    {#bright_black}│",
+      "format": "{$1}{1}d {2}h {3}m {4}s",
+    },
+    {
+      "type": "title",
+      "key": "{#bright_black}│ {#bright_blue}              {#bright_black}│",
+      "format": "{$1}",
+    },
+
+    // Desktop
+    {
+      "type": "title",
+      "key": "{#bright_black}│ {#bright_green}Desktop       {#bright_black}│",
+      "format": "{$1}",
+    },
+    {
+      "type": "os",
+      "key": "{#bright_black}│ {#bright_green}├─{icon} OS        {#bright_black}│",
+      "format": "{$1}{id}{?variant} {variant}{?}{?codename} {#bright_black}[{codename} {arch}]{?}",
+    },
+    {
+      "type": "kernel",
+      "key": "{#bright_black}│ {#bright_green}├─󰃞 Kernel    {#bright_black}│",
+      "format": "{$1}{sysname}{?release}  {#2}[v{release}]{?}",
+    },
+    {
+      "type": "display",
+      "key": "{#bright_black}│ {#bright_green}├─󰍹 Display   {#bright_black}│",
+      "format": "{$1}{width}x{height}{?refresh-rate} @ {refresh-rate}Hz{?}{?inch} | {inch}\"{?}{?manufacture-year} | Fab: {manufacture-year}{?}",
+    },
+    {
+      "type": "wm",
+      "key": "{#bright_black}│ {#bright_green}╰─󰝘 WM        {#bright_black}│",
+      "format": "{$1}{plugin-name}{?pretty-name} {#bright_black}[{pretty-name}{?version} {version}{?}]{?}",
+    },
+    {
+      "type": "title",
+      "key": "{#bright_black}│ {#bright_blue}              {#bright_black}│",
+      "format": "{$1}",
+    },
+
+    // System
+    {
+      "type": "title",
+      "key": "{#bright_black}│ {#bright_red}System        {#bright_black}│",
+      "format": "{$1}",
+    },
+    {
+      "type": "cpu",
+      "key": "{#bright_black}│ {#bright_red}├─󰻠 CPU       {#bright_black}│",
+      "showPeCoreCount": true,
+      "temp": true,
+      "format": "{$1}{name}{?freq-max} @ {freq-max}{?} {#bright_black}[{cores-physical}P/{cores-logical}L Cores]{?temperature} [{temperature}{?}{#bright_black}]",
+    },
+    {
+      "type": "gpu",
+      "key": "{#bright_black}│ {#bright_red}├─󰍛 GPU       {#bright_black}│",
+      "detectionMethod": "auto",
+      "driverSpecific": true,
+      "format": "{$1}{name} {#bright_black}{?frequency}[{frequency}]{?}{?type} [{type}]",
+    },
+    {
+      "type": "memory",
+      "key": "{#bright_black}│ {#bright_red}├─ Memory    {#bright_black}│",
+      "format": "{$1}{used} / {total} {#bright_black}[{percentage} {#bright_black}used]",
+    },
+    {
+      "type": "disk",
+      "key": "{#bright_black}│ {#bright_red}╰─ Disk      {#bright_black}│",
+      "format": "{$1}{size-used} / {size-total}{?size-percentage} {#bright_black}[{size-percentage} {#bright_black}used]{?}{?filesystem} [{filesystem}]{?}",
+    },
+    {
+      "type": "title",
+      "key": "{#bright_black}│ {#bright_blue}              {#bright_black}│",
+      "format": "{$1}",
+    },
+
+    // CLI
+    {
+      "type": "title",
+      "key": "{#bright_black}│ {#bright_yellow}CLI           {#bright_black}│",
+      "format": "{$1}",
+    },
+    {
+      "type": "terminal",
+      "key": "{#bright_black}│ {#bright_yellow}├─ Terminal  {#bright_black}│",
+      "format": "{$1}{pretty-name}{?version} {#bright_black}[{version}]{?}{?pid} {#bright_black}[PID:{pid}]{?}",
+    },
+    {
+      "type": "terminalfont",
+      "key": "{#bright_black}│ {#bright_yellow}├─ Font      {#bright_black}│",
+      "format": "{$1}{name}{?size} {#bright_black}[{size}pt]{?}",
+    },
+    {
+      "type": "shell",
+      "key": "{#bright_black}│ {#bright_yellow}├─ Shell     {#bright_black}│",
+      "format": "{$1}{pretty-name}{?version} {#bright_black} [v{version}]{?}{?pid} {#bright_black} [PID:{pid}]{?}",
+    },
+    {
+      "type": "command",
+      "key": "{#bright_black}│ {#bright_yellow}├─ NodeJS    {#bright_black}│",
+      "text": "node --version",
+      "format": "{$1}node {1}",
+    },
+    {
+      "type": "command",
+      "key": "{#bright_black}│ {#bright_yellow}╰─󰊢 Git       {#bright_black}│",
+      "text": "git version",
+      "format": "{$1}git {~12}",
+    },
+
+    // Footer
+    {
+      "type": "custom",
+      "key": "{#90}╰───────────────╯",
+      "format": "{#90}╰──────────────────────────────────────────────────────────────────────────────────╯",
+    },
+    {
+      "type": "custom",
+      "key": " ",
+      "format": "{#90}╭ Colors ───────────────────────────────────────────────────────────────────────────────────────────╮",
+    },
+    {
+      "type": "custom",
+      "format": "{#bright_black}│ {#90}    {#91}    {#92}    {#93}    {#94}    {#95}    {#96}    {#97}    {#98}    {#99}    {#39}    {#38}    {#37}    {#36}    {#35}    {#34}    {#33}    {#32}    {#31}    {#30}  {#bright_black}│",
+    },
+    {
+      "type": "custom",
+      "format": "{#90}╰───────────────────────────────────────────────────────────────────────────────────────────────────╯",
+    },
+  ],
+}

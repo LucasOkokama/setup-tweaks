@@ -1,0 +1,114 @@
+{
+  "palette": {
+    "blue": "#8caaee",
+    "flamingo": "#eebebe",
+    "green": "#a6d189",
+    "mauve": "#ca9ee6",
+    "peach": "#f5a97f",
+    "pink": "#f4b8e4",
+    "red": "#e78284",
+    "sapphire": "#85c1dc",
+    "teal": "#8bd5ca",
+    "yellow": "#e5c890",
+    "surfaceTwo": "#626880"
+  },
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "white",
+          "options": {
+            "fetch_version": false
+          },
+          "style": "plain",
+          "template": "({{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }})",
+          "type": "python"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "red",
+          "style": "plain",
+          "template": "% ",
+          "type": "root"
+        },
+        {
+          "style": "plain",
+          "template": "<p:mauve>{{ .UserName }}@{{ .HostName }}</> ",
+          "type": "session"
+        },
+        {
+          "options": {
+            "branch_icon": "",
+            "fetch_status": true
+          },
+          "style": "plain",
+          "template": "<p:surfaceTwo>::</> {{ if or (.Working.Changed) (.Staging.Changed) (gt .StashCount 0) }}<p:red>{{ .HEAD }}</>{{ else }}<p:blue>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0)}}<p:green>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<p:peach>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <p:teal>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <p:yellow>{{ .Working.String }}</>{{ end }}  ",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "transparent",
+          "options": {
+            "style": "austin",
+            "threshold": 0
+          },
+          "style": "plain",
+          "template": "<p:surfaceTwo> {{.FormattedMs}}</>",
+          "type": "executiontime"
+        },
+        {
+          "background": "transparent",
+          "options": {
+            "time_format": "15:04:05 02/01/2006"
+          },
+          "style": "plain",
+          "template": "<p:surfaceTwo> · {{.CurrentDate | date .Format}}</>",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "options": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<p:sapphire>{{ .Path }}</>",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "style": "plain",
+          "template": "<p:mauve>$</>",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 4
+}
