@@ -1,10 +1,9 @@
 /*
   # Download "Stylus" Chrome extension [https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne].
+  # Click on "Write new style"
+  # Give a name to the set of CSS code that you just created
   # Open the extensions and click "Manage"
   # Click on "Write new style or "+" sign
-  # Give a name to the set of CSS code that you just created
-  # Paste the CSS in the code area
-  # Above the code area select "URLs starting with" and type "https://www.google.com" next to it or whatever webite it shoud work
   # Hit the button "Save" or Ctrl + S
 */
 
@@ -17,6 +16,12 @@ html {
 /* Limit the main page width to 60% */
 body {
   width: 60% !important;
+}
+
+@media (max-width: 2000px) {
+  body {
+    width: 100% !important;
+  }
 }
 
 /*

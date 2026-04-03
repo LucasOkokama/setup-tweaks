@@ -302,8 +302,7 @@ configuration:
 | win + 4                     | Move window to workspace 3             |
 | win + 5                     | Move window to workspace 4             |
 | win + 6                     | Move window to workspace 5             |
-| alt + j                     | Switch to the next layout              |
-| alt + k                     | Switch to the previous layout          |
+| ctrl + alt + k              | Full Restart Komorebi                  |
 
 <!-- prettier-ignore-start -->
 > [!WARNING]

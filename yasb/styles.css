@@ -232,8 +232,6 @@
 .memory-widget {
   padding: 0;
   background-color: var(--frappe-sapphire);
-  border-top-left-radius: var(--default-border-radius-edge);
-  border-bottom-left-radius: var(--default-border-radius-edge);
 }
 .memory-widget .widget-container .label {
   margin: var(--space-2);

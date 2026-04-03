@@ -1,3 +1,15 @@
+#guide-links-primary {
+  display: none;
+}
+
+#guide-links-secondary {
+  display: none;
+}
+
+#footer.ytd-guide-renderer > #copyright {
+  display: none !important;
+}
+
 #sections {
   max-width: 1000px;
   margin: auto;

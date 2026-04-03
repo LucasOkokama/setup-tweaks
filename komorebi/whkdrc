@@ -8,26 +8,26 @@ alt + i                 : komorebic toggle-shortcuts
 alt + escape            : komorebic close
 
 # Focus windows
-alt + a        				 	: komorebic focus left
-alt + s         				: komorebic focus down
-alt + w         				: komorebic focus up
-alt + d         				: komorebic focus right
+alt + a                 : komorebic focus left
+alt + s                 : komorebic focus down
+alt + d                 : komorebic focus right
+alt + w                 : komorebic focus up
 
 # Move windows
-win + a         				: komorebic move left
-win + s         				: komorebic move down
-win + w         				: komorebic move up
-win + d         				: komorebic move right
-alt + space					    : komorebic promote-swap
+win + a                 : komorebic move left
+win + s                 : komorebic move down
+win + w                 : komorebic move up
+win + d                 : komorebic move right
+alt + space             : komorebic promote-swap
 
 # Stack windows
-alt + r   					    : komorebic stack left
-alt + f        			    : komorebic stack down
-alt + t				          : komorebic stack up
-alt + g   				      : komorebic stack right
-alt + c				  		    : komorebic unstack
-alt + q         				: komorebic cycle-stack previous
-alt + e        					: komorebic cycle-stack next
+alt + r                 : komorebic stack left
+alt + f                 : komorebic stack down
+alt + t                 : komorebic stack up
+alt + g                 : komorebic stack right
+alt + c                 : komorebic unstack
+alt + q                 : komorebic cycle-stack previous
+alt + e                 : komorebic cycle-stack next
 
 # Resize
 alt + oem_plus          : komorebic resize-axis horizontal increase
@@ -38,8 +38,7 @@ alt + shift + oem_minus : komorebic resize-axis vertical decrease
 # Layouts
 alt + z                 : komorebic toggle-float
 alt + x                 : komorebic toggle-monocle
-alt + j 								: komorebic cycle-layout next
-alt + k 								: komorebic cycle-layout previous
+ctrl + alt + k          : komorebic stop --whkd; komorebic start --whkd
 
 # Workspaces
 alt + 1                 : komorebic focus-workspace 0
@@ -50,9 +49,9 @@ alt + 5                 : komorebic focus-workspace 4
 alt + 6                 : komorebic focus-workspace 5
 
 # Move windows across workspaces
-win + 1         				: komorebic move-to-workspace 0
-win + 2         				: komorebic move-to-workspace 1
-win + 3         				: komorebic move-to-workspace 2
-win + 4         				: komorebic move-to-workspace 3
-win + 5         				: komorebic move-to-workspace 4
-win + 6         				: komorebic move-to-workspace 5
+win + 1                 : komorebic move-to-workspace 0
+win + 2                 : komorebic move-to-workspace 1
+win + 3                 : komorebic move-to-workspace 2
+win + 4                 : komorebic move-to-workspace 3
+win + 5                 : komorebic move-to-workspace 4
+win + 6                 : komorebic move-to-workspace 5

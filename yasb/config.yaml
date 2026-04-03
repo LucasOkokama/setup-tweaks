@@ -60,7 +60,7 @@ widgets:
   super_start_menu:
     type: "yasb.custom.CustomWidget"
     options:
-      label: "<span>\ue8e5</span>"
+      label: "<span>\ue62a</span>"
       class_name: "super-start-menu-widget"
       callbacks:
         on_left: "exec start_menu"
