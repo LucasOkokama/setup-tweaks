@@ -2,7 +2,9 @@
 
 # General
 alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden
-alt + shift + o         : komorebic reload-configuration
+ctrl + alt + p          : komorebic stop
+ctrl + alt + l          : komorebic start
+ctrl + alt + r          : komorebic stop --whkd; komorebic start --whkd
 alt + i                 : komorebic toggle-shortcuts
 
 alt + escape            : komorebic close
@@ -38,7 +40,6 @@ alt + shift + oem_minus : komorebic resize-axis vertical decrease
 # Layouts
 alt + z                 : komorebic toggle-float
 alt + x                 : komorebic toggle-monocle
-ctrl + alt + k          : komorebic stop --whkd; komorebic start --whkd
 
 # Workspaces
 alt + 1                 : komorebic focus-workspace 0
