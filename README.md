@@ -267,6 +267,11 @@ configuration:
 
 | Shortcut                    | Action Description                     |
 | --------------------------- | -------------------------------------- |
+| alt + o                     | Kill and restart WHKD                  |
+| ctrl + alt + p              | Stop Komorebi                          |
+| ctrl + alt + l              | Start Komorebi                         |
+| ctrl + alt + r              | Restart Komorebi (with WHKD)           |
+| alt + i                     | Toggle shortcuts                       |
 | alt + escape                | Close the current window               |
 | alt + a                     | Move focus to the window on the left   |
 | alt + s                     | Move focus to the window below         |
@@ -302,7 +307,6 @@ configuration:
 | win + 4                     | Move window to workspace 3             |
 | win + 5                     | Move window to workspace 4             |
 | win + 6                     | Move window to workspace 5             |
-| ctrl + alt + k              | Full Restart Komorebi                  |
 
 <!-- prettier-ignore-start -->
 > [!WARNING]
