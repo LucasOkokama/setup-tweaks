@@ -131,7 +131,7 @@ It defines which modules are shown, their layout, and styling. You can use
 pre-made presets or customize it manually to adjust the information and
 appearance displayed in the terminal
 
-### Inpirations
+### Inspirations
 
 The prompt design for Oh My Posh in this setup was **created from scratch, but
 its structure and segment layout were guided by existing examples for practical
@@ -335,7 +335,7 @@ For reference, consult the official Microsoft documentation for the
 [**`United States Keyboard Layout`**](https://learn.microsoft.com/windows/win32/inputdev/virtual-key-codes)
 to review the standard virtual-key definitions. If you are working with a
 different keyboard layout, such as
-the[**`Brazilian Keyboard Layout (ABNT2)`**](https://kbdlayout.info/KBDBR/virtualkeys),
+the [**`Brazilian Keyboard Layout (ABNT2)`**](https://kbdlayout.info/KBDBR/virtualkeys),
 you can use the kbdlayout website as previously described to look up the
 corresponding virtual-key mappings and OEM values.
 
@@ -349,7 +349,7 @@ updates often improve stability and performance.
 <!-- prettier-ignore-start -->
 > [!WARNING]
 > Many common issues are already explained in the
-> [**`documentations`**](https://komorebi-starlight.lgug2z.workers.dev/guides/known-issues/)
+> [**`documentation`**](https://komorebi-starlight.lgug2z.workers.dev/guides/known-issues/)
 <!-- prettier-ignore-end -->
 
 <br>
@@ -373,7 +373,7 @@ style and configuring it for the desired website**:
 
 1. Install the
    [**`Stylus`**](https://chromewebstore.google.com/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
-   extension from the Chrome Web Store .
+   extension from the Chrome Web Store.
 2. Open the Chrome extensions page and select `Manage` for Stylus.
 3. Click the `Write new style` button (or the `+` icon) to create a new style.
 4. Assign a descriptive name to the style you are creating.
@@ -462,7 +462,7 @@ In order for the settings to work properly, **install the following extensions**
 | Prettier - Code formatter | Formats code automatically according to style rules | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=esbenp.prettier-vscode)             |
 | Red Hat YAML              | YAML language support and formatter                 | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=redhat.vscode-yaml)                 |
 
-## Tips
+### Tips
 
 The following extensions are not included in the `settings.json` configuration,
 but I highly recommend them as they are very useful for improving productivity
@@ -546,7 +546,7 @@ present in my configuration are:
 > Most animations and tooltips are disabled!
 <!-- prettier-ignore-end -->
 
-### Inpirations
+### Inspirations
 
 The design of YASB was created entirely from scratch, handcrafted without
 copying anyone else's code. **While the implementation is original, the visual
@@ -571,7 +571,7 @@ consistency.
 
 ### Tips
 
-#### Comunity Themes
+#### Community Themes
 
 If you want, **you can customize YASB by editing the configuration files to suit
 your own needs and preferences**. For those who prefer ready-made visuals, there

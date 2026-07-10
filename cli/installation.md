@@ -91,7 +91,7 @@
 
 ### Terminal Icons
 
-1. Open PowerShell as administratos and install Terminal Fonts:
+1. Open PowerShell as administrator and install Terminal Fonts:
 
    ```powershell
    Install-Module -Name Terminal-Icons -Repository PSGallery
@@ -136,19 +136,19 @@
 
 ### FastFetch
 
-1.  Install Oh My Posh using the following command:
+1.  Install FastFetch using the following command:
 
     ```powershell
     winget install fastfetch
     ```
 
-2.  Create the `config.jsonc` file at the following location:
+1.  Create the `config.jsonc` file at the following location:
 
     ```
     C:\Users\<Your_Username>\.config\fastfetch\config.jsonc
     ```
 
-3.  Open the `config.jsonc` file and paste the configuration from
+1.  Open the `config.jsonc` file and paste the configuration from
     [**`fastfetch-config.jsonc`**](./fastfetch-config.jsonc).
 
 <!-- prettier-ignore-start -->
