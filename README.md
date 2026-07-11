@@ -56,6 +56,7 @@ reference implementation rather than a prescriptive standard**.
 - [Komorebi](#komorebi)
 - [OpenCode](#opencode)
 - [Style Overrides](#style-overrides)
+- [TrafficMonitor](#trafficmonitor)
 - [VS Code](#vs-code)
 - [YASB - Yet Another Status Bar](#yasb---yet-another-status-bar)
 
@@ -489,7 +490,58 @@ custom CSS into pages.
 <br>
 <br>
 
-<!-- --- --- VS Code --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
+<!-- --- --- TrafficMonitor --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
+
+## TrafficMonitor
+
+![PREVIEW](./trafficmonitor/preview.png)
+
+### Overview
+
+[**`TrafficMonitor`**](https://github.com/zhongyang219/TrafficMonitor) is a
+**network monitoring tool for Windows** that displays real-time network speed,
+CPU usage, memory usage, and other system information directly on the taskbar
+or in a floating window. It is lightweight, highly customizable, and supports
+multiple display modes.
+
+To install TrafficMonitor, refer to the
+[**`official documentation`**](https://github.com/zhongyang219/TrafficMonitor/wiki/Home_en)
+for setup instructions and system requirements.
+
+### Configurations
+
+You can access my configuration file here:
+
+- [**`config.ini`**](./trafficmonitor/config.ini)
+
+TrafficMonitor is configured through the
+[**`config.ini`**](https://github.com/zhongyang219/TrafficMonitor/wiki/Option-Settings#Taskbar-Window-Settings)
+file, which controls general behavior, taskbar display, notification thresholds,
+color schemes, and window layout. The file is organized into sections such as
+`[general]`, `[task_bar]`, `[notify_tip]`, and `[skins]`, each managing a
+specific aspect of the application.
+
+This configuration focuses primarily on the **Taskbar Window** display, as the
+**Main Window** is not used, it is considered unnecessary for this setup. All
+relevant settings are tailored to the taskbar integration, including item
+order, colors, font, spacing, and display format.
+
+### Known Issues
+
+While TrafficMonitor is generally stable, some features may behave differently
+depending on the Windows version, taskbar configuration, or display scaling.
+Certain taskbar display options may not work as expected on newer Windows 11
+updates, and hardware monitoring may vary across different system
+configurations.
+
+<!-- prettier-ignore-start -->
+> [!WARNING]
+> Many common issues are already explained or resolved in the
+> [**`FAQ`**](https://github.com/zhongyang219/TrafficMonitor/blob/master/Help_en-us.md)
+<!-- prettier-ignore-end -->
+
+<br>
+<br>
 
 ## VS Code
 
