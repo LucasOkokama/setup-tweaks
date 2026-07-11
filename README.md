@@ -59,6 +59,7 @@ reference implementation rather than a prescriptive standard**.
 - [TrafficMonitor](#trafficmonitor)
 - [VS Code](#vs-code)
 - [YASB - Yet Another Status Bar](#yasb---yet-another-status-bar)
+- [Additional Software](#additional-software)
 
 <br>
 <br>
@@ -735,3 +736,18 @@ configuration and monitor system behavior.
 > Many common issues are already explained or resolved in the
 > [**`FAQ`**](https://docs.yasb.dev/latest/faq)
 <!-- prettier-ignore-end -->
+
+<br>
+<br>
+
+<!-- --- --- Additional Software --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
+
+## Additional Software
+
+| Software | Description |
+| -------- | ----------- |
+| [**`Brave`**](https://brave.com/) | Privacy-focused web browser with built-in ad and tracker blocking, faster page loading, and optional VPN. |
+| [**`GDownloader`**](https://github.com/hstr0100/GDownloader) | User-friendly GUI wrapper for yt-dlp, gallery-dl, and spotDL that enables batch downloading of videos, audio, and image galleries from YouTube, Spotify, Crunchyroll, Twitch, and other platforms. |
+| [**`Mutello`**](https://www.mutello.org/) | Lightweight Windows mic-mute app for the system tray with a global hotkey, optional always-on-top overlay, and clear mute state for the default recording device. |
+| [**`ShareX`**](https://getsharex.com/) | Free and open source screen capture, screen recording (including GIF), file sharing, and productivity tool for Windows with annotation, editing, and customizable upload workflows. |
+| [**`WizTree`**](https://diskanalyzer.com/) | High-speed disk space analyzer for Windows that reads the NTFS Master File Table directly to scan drives in seconds, finding the largest files and folders visually. |
