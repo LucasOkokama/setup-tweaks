@@ -10,54 +10,100 @@
 /* Center all content horizontally on the page */
 html {
   display: flex !important;
-  justify-content: center !important;
-}
-
-/* Limit the main page width to 60% */
-body {
-  width: 60% !important;
-}
-
-@media (max-width: 2000px) {
-  body {
-    width: 100% !important;
-  }
+  flex-direction: column;
+  align-items: center !important;
 }
 
 /*
-Center the floating search bar (appears when scrolling down).
+Center the search bar (and the floating one).
 */
-.CTOaxb {
-  position: fixed !important;
-  width: 60% !important;
-  left: 0 !important;
-  right: 0 !important;
-  margin: 0 auto !important;
+.Xx7Mif.E5eFb {
+    position: fixed !important;
+    left: unset !important;
+    right: unset !important;
+    z-index: 200 !important;
+}
+
+
+#searchform {
+    max-width: 1400px !important;
+}
+
+.tsf {
+    max-width: none !important;
+}
+
+.A8SBwf.pD4qTd.emcav {
+    width: 100%
+}
+
+
+/*
+Remove the 210px space from the first column
+*/
+@media (min-width: 1560px) {
+    #searchform {
+        grid-template-columns: minmax(0, 300px) repeat(14, 36px) minmax(0, 1fr);
+    }
+}
+
+@media (min-width: 1560px) {
+    .YNk70c {
+        grid-template-columns: minmax(0, 425px) repeat(20, 36px) minmax(0, 1fr);
+    }
+}
+
+@media (min-width: 1560px) {
+    #rcnt {
+        grid-template-columns: minmax(0, 425px) repeat(20, 36px) minmax(0, 1fr);
+    }
 }
 
 /*
-Prevent the search bar from expanding excessively when it receives focus.
+Removes the top spacing
 */
-.emcav.A8SBwf.pD4qTd {
-  width: auto !important;
-}
-
-/*
-Remove the "People also search for" section that appears inside the search area.
-*/
-.rLrQHf {
+.xrOgrb {
   display: none !important;
 }
 
 /*
-Hide the "AI Mode" option from the top menu bar.
+Removes the "logo" frmo the top menu bar
+*/
+.logo{
+  display: none !important;
+}
+
+/*
+Removes the left spacing from search bar and make it full sized
+*/
+.A8SBwf {
+    width: 100%;
+    margin: 0 !important;
+}
+
+/*
+Removes the "People also search for" section that appears inside the search area.
+*/
+.rLrQHf, .e1R9Ud {
+  display: none !important;
+}
+
+/*
+Removes the "AI Mode" option from the top menu bar.
 */
 .olrp5b {
   display: none !important;
 }
 
 /*
-Hide the footer section from the page.
+Removes the tab menu divider line
+*/
+.Fgyi2e.wZQcA {
+  display: none !important;
+}
+
+/*
+Remove the footer section from the page.
 */
 #sfooter {
   display: none !important;

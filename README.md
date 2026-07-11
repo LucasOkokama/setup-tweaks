@@ -339,8 +339,8 @@ virtual-key code associated with each key in a specific keyboard layout.
 For reference, consult the official Microsoft documentation for the
 [**`United States Keyboard Layout`**](https://learn.microsoft.com/windows/win32/inputdev/virtual-key-codes)
 to review the standard virtual-key definitions. If you are working with a
-different keyboard layout, such as
-the [**`Brazilian Keyboard Layout (ABNT2)`**](https://kbdlayout.info/KBDBR/virtualkeys),
+different keyboard layout, such as the
+[**`Brazilian Keyboard Layout (ABNT2)`**](https://kbdlayout.info/KBDBR/virtualkeys),
 you can use the kbdlayout website as previously described to look up the
 corresponding virtual-key mappings and OEM values.
 
@@ -368,11 +368,11 @@ updates often improve stability and performance.
 
 ### Overview
 
-[**`OpenCode`**](https://github.com/anomalyco/opencode) is an **interactive
-CLI tool that assists with software engineering tasks directly from the
-terminal**. It integrates with the codebase through a set of specialized tools
-for reading, writing, searching, and executing commands, making it a versatile
-assistant for development workflows.
+[**`OpenCode`**](https://github.com/anomalyco/opencode) is an **interactive CLI
+tool that assists with software engineering tasks directly from the terminal**.
+It integrates with the codebase through a set of specialized tools for reading,
+writing, searching, and executing commands, making it a versatile assistant for
+development workflows.
 
 To install OpenCode, refer to the
 [**`official documentation`**](https://opencode.ai/docs) for setup instructions
@@ -427,6 +427,9 @@ The web interface tends to offer better formatting and a more visual experience.
 If you prefer the terminal, you can customize its appearance and keybindings
 through the [**`tui.json`**](https://opencode.ai/docs/tui/#configure)
 configuration file.
+
+<br>
+<br>
 
 ## Style Overrides
 
