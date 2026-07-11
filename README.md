@@ -54,6 +54,7 @@ reference implementation rather than a prescriptive standard**.
 
 - [CLI](#cli)
 - [Komorebi](#komorebi)
+- [OpenCode](#opencode)
 - [Style Overrides](#style-overrides)
 - [VS Code](#vs-code)
 - [YASB - Yet Another Status Bar](#yasb---yet-another-status-bar)
@@ -359,7 +360,73 @@ updates often improve stability and performance.
 <br>
 <br>
 
-<!-- --- --- Style Overrides --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
+<!-- --- --- OpenCode --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- -->
+
+## OpenCode
+
+![PREVIEW](./opencode/preview.png)
+
+### Overview
+
+[**`OpenCode`**](https://github.com/anomalyco/opencode) is an **interactive
+CLI tool that assists with software engineering tasks directly from the
+terminal**. It integrates with the codebase through a set of specialized tools
+for reading, writing, searching, and executing commands, making it a versatile
+assistant for development workflows.
+
+To install OpenCode, refer to the
+[**`official documentation`**](https://opencode.ai/docs) for setup instructions
+and system requirements. The documentation covers installation methods,
+configuration options, and usage guidelines.
+
+### Configurations
+
+You can access my configuration files here:
+
+- [**`opencode.jsonc`**](./opencode/opencode.jsonc)
+- [**`AGENTS.md`**](./opencode/AGENTS.md)
+
+The [**`opencode.jsonc`**](https://opencode.ai/docs/config/) file is the main
+configuration file for OpenCode. It defines server settings, permission rules,
+default agent behavior, snapshot preferences, compaction policies, and watcher
+exclusions. The file uses JSON with comments (JSONC) format and follows the
+official schema.
+
+The [**`AGENTS.md`**](./opencode/AGENTS.md) file contains global development
+instructions that guide how OpenCode behaves when assisting with software
+engineering tasks. It covers language and communication, code style, error
+handling, security, and other behavioral rules.
+
+### Tips
+
+#### Quick Commands
+
+OpenCode provides a few shortcuts for common actions:
+
+- Use `\` to execute OpenCode-specific commands:
+  - `\help` - Show available commands
+  - `\add` - Add files to the context
+
+- Use `!` to execute shell commands directly:
+  - `!dir` - List directory contents
+  - `!git status` - Check repository status
+
+- Use `@` to reference project files:
+  - `@index.ts` - Reference a specific file
+
+#### Running OpenCode
+
+OpenCode can be run directly from the terminal or through a web interface:
+
+```bash
+opencode          # Run in the terminal
+opencode --web    # Run in the web interface
+```
+
+The web interface tends to offer better formatting and a more visual experience.
+If you prefer the terminal, you can customize its appearance and keybindings
+through the [**`tui.json`**](https://opencode.ai/docs/tui/#configure)
+configuration file.
 
 ## Style Overrides
 
