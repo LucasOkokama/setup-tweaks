@@ -12,10 +12,8 @@
 */
 
 {
-  // File opening behavior
-  "workbench.editorAssociations": {
-    "*.svg": "default"
-  },
+  // Git
+  "git.autofetch": true,
 
   // Autosave, Formatting, Imports and Error Checking
   "files.autoSave": "afterDelay",
@@ -48,25 +46,27 @@
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml" // https://marketplace.visualstudio.com/items/?itemName=redhat.vscode-yaml
   },
-
   "editor.codeActionsOnSave": {
     "source.sortImports": "always",
     "source.fixAll": "always"
   },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.suggest.autoImports": true,
-  "typescript.preferences.preferTypeOnlyAutoImports": true,
-
-  "typescript.validate.enable": true,
-  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "js/ts.validate.enabled": true,
+  "js/ts.tsserver.experimental.enableProjectDiagnostics": true,
+  "js/ts.suggest.autoImports": true,
+  "js/ts.preferences.preferTypeOnlyAutoImports": true,
   "errorLens.messageTemplate": "$message ($source)",
   "errorLens.onSave": false,
+
+  // File opening behavior
+  "workbench.editorAssociations": {
+    "*.svg": "default"
+  },
 
   // General Personalization
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Mayukai Mono", // https://marketplace.visualstudio.com/items/?itemName=GulajavaMinistudio.mayukaithemevsc
-  "editor.fontFamily": "JetBrains Mono", // https://www.jetbrains.com/lp/mono/
+  "editor.fontFamily": "Meslo LG L", // https://www.fontmirror.com/meslo-lg
   "workbench.iconTheme": "bearded-icons", // https://marketplace.visualstudio.com/items?itemName=BeardedBear.beardedicons
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
@@ -85,12 +85,16 @@
 
   // Header
   "window.commandCenter": false,
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "chat.titleBar.signIn.enabled": false,
+  "workbench.browser.showInTitleBar": false,
   "workbench.layoutControl.enabled": false,
   "workbench.editor.labelFormat": "default",
 
-  // Left painel
+  // Primary Side Bar
   "explorer.copyRelativePathSeparator": "/",
-  "workbench.activityBar.location": "hidden",
+  "workbench.activityBar.location": "top",
+  "workbench.activityBar.compact": true,
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.tree.indent": 22,
@@ -99,6 +103,8 @@
   "explorer.autoReveal": false,
   "explorer.decorations.badges": false,
   "workbench.editor.enablePreview": false,
+  // "workbench.editor.tabSizing": "shrink",
+  // "workbench.editor.pinnedTabSizing": "compact",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "editor.gotoLocation.multipleDefinitions": "goto",
@@ -106,7 +112,11 @@
   "editor.gotoLocation.multipleDeclarations": "goto",
   "editor.gotoLocation.multipleImplementations": "goto",
 
-  // Center Painel (code editor)
+  // Code Editor
+  "editor.padding.top": 12,
+  // "breadcrumbs.enabled": false,
+  "breadcrumbs.symbolPath": "off",
+  "breadcrumbs.filePath": "on",
   "editor.stickyScroll.enabled": false,
   "editor.lightbulb.enabled": "off",
   "editor.wordWrap": "on",
@@ -118,28 +128,38 @@
   "editor.guides.highlightActiveBracketPair": true,
   "editor.fontSize": 12,
   "editor.lineHeight": 1.8,
-  "editor.fontWeight": "300",
+  "editor.fontWeight": "400",
   "editor.fontLigatures": true,
   "editor.linkedEditing": true,
+  "editor.emptySelectionClipboard": false,
   "editor.semanticHighlighting.enabled": true,
+  "editor.renderLineHighlight": "all",
   "editor.renderWhitespace": "boundary",
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "editor.fastScrollSensitivity": 453,
   "editor.mouseWheelScrollSensitivity": 1.2,
-
-  // Right painel
   "editor.minimap.enabled": false,
   // "editor.scrollbar.vertical": "hidden",
   "editor.scrollbar.horizontal": "hidden",
+  "editor.hover.delay": 500,
+
+  // Secondary Side Bar
   "editor.overviewRulerBorder": false,
   "editor.hideCursorInOverviewRuler": true,
-  "terminal.integrated.fontFamily": "JetBrains Mono", // https://www.jetbrains.com/lp/mono/
+  "terminal.integrated.fontFamily": "Meslo LG L", // https://www.fontmirror.com/meslo-lg
+  "terminal.integrated.fontWeight": "400",
   "terminal.integrated.defaultProfile.windows": "Git Bash", // https://git-scm.com/downloads
   "terminal.integrated.fontSize": 10,
   "terminal.integrated.lineHeight": 1.8,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.confirmOnExit": "never",
 
-  // Bottom painel
+  // Panel
+  "workbench.panel.showLabels": false,
+
+  // Footer
   "workbench.statusBar.visible": false
 }
