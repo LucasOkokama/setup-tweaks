@@ -385,8 +385,14 @@ configuration options, and usage guidelines.
 
 You can access my configuration files here:
 
-- [**`opencode.jsonc`**](./opencode/opencode.jsonc)
 - [**`AGENTS.md`**](./opencode/AGENTS.md)
+- [**`opencode.jsonc`**](./opencode/opencode.jsonc)
+- [**`opencode/skills/`**](./opencode/skills/)
+
+The [**`AGENTS.md`**](./opencode/AGENTS.md) file contains global development
+instructions that guide how OpenCode behaves when assisting with software
+engineering tasks. It covers language and communication, code style, error
+handling, security, and other behavioral rules.
 
 The [**`opencode.jsonc`**](https://opencode.ai/docs/config/) file is the main
 configuration file for OpenCode. It defines server settings, permission rules,
@@ -394,10 +400,14 @@ default agent behavior, snapshot preferences, compaction policies, and watcher
 exclusions. The file uses JSON with comments (JSONC) format and follows the
 official schema.
 
-The [**`AGENTS.md`**](./opencode/AGENTS.md) file contains global development
-instructions that guide how OpenCode behaves when assisting with software
-engineering tasks. It covers language and communication, code style, error
-handling, security, and other behavioral rules.
+The [**`opencode/skills/`**](./opencode/skills/) directory contains custom skills
+that extend OpenCode's capabilities:
+
+| Skill | Purpose |
+|-------|---------|
+| `k2gj-commit-message` | Generate Conventional Commits messages from diffs/changes |
+| `k2gj-dead-code` | Detect and report potentially unused/unreachable code |
+| `k2gj-generate-readme` | Generate project README from repository evidence |
 
 ### Tips
 
