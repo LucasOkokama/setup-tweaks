@@ -265,10 +265,12 @@ in the background, interpreting the whkdrc bindings and executing actions. In
 Komorebi, it manages shortcuts for controlling the window manager, such as
 changing layouts, moving windows, switching workspaces, and resizing containers.
 
-Here is a table showing the **keybindings** from my personal whkdrc
+### Keybindings
+
+Here is a table showing the **keybindings** from my personal `whkdrc`
 configuration:
 
-| Shortcut                    | Action Description                     |
+| Keybind                     | Action Description                     |
 | --------------------------- | -------------------------------------- |
 | alt + o                     | Kill and restart WHKD                  |
 | ctrl + alt + p              | Stop Komorebi                          |
@@ -385,14 +387,9 @@ configuration options, and usage guidelines.
 
 You can access my configuration files here:
 
-- [**`AGENTS.md`**](./opencode/AGENTS.md)
 - [**`opencode.jsonc`**](./opencode/opencode.jsonc)
+- [**`tui.jsonc`**](./opencode/tui.jsonc)
 - [**`opencode/skills/`**](./opencode/skills/)
-
-The [**`AGENTS.md`**](./opencode/AGENTS.md) file contains global development
-instructions that guide how OpenCode behaves when assisting with software
-engineering tasks. It covers language and communication, code style, error
-handling, security, and other behavioral rules.
 
 The [**`opencode.jsonc`**](https://opencode.ai/docs/config/) file is the main
 configuration file for OpenCode. It defines server settings, permission rules,
@@ -400,45 +397,63 @@ default agent behavior, snapshot preferences, compaction policies, and watcher
 exclusions. The file uses JSON with comments (JSONC) format and follows the
 official schema.
 
-The [**`opencode/skills/`**](./opencode/skills/) directory contains custom skills
-that extend OpenCode's capabilities:
+The [**`tui.jsonc`**](https://opencode.ai/docs/tui/#configure) file configures
+OpenCode's Text User Interface (TUI). It controls keybindings, theme settings,
+layout preferences, and interactive behavior within the terminal interface. This
+allows you to customize how OpenCode looks and behaves during interactive
+sessions.
 
-| Skill | Purpose |
-|-------|---------|
-| `k2gj-commit-message` | Generate Conventional Commits messages from diffs/changes |
-| `k2gj-dead-code` | Detect and report potentially unused/unreachable code |
-| `k2gj-generate-readme` | Generate project README from repository evidence |
+The [**`opencode/skills/`**](./opencode/skills/) directory contains custom
+skills that extend OpenCode's capabilities. Skills are reusable, shareable units
+of functionality that can be loaded to add new tools, workflows, or behaviors to
+OpenCode. See the
+[**`official skills documentation`**](https://opencode.ai/docs/skills/) for more
+details on creating and using skills.
 
-### Tips
+| Skill                  | Purpose                                                   |
+| ---------------------- | --------------------------------------------------------- |
+| `k2gj-commit-message`  | Generate Conventional Commits messages from diffs/changes |
+| `k2gj-dead-code`       | Detect and report potentially unused/unreachable code     |
+| `k2gj-generate-readme` | Generate project README from repository evidence          |
 
-#### Quick Commands
+### Keybindings
 
-OpenCode provides a few shortcuts for common actions:
+Here is a table showing the **keybindings** from my personal `tui.jsonc`
+configuration. Bindings set to `none` are disabled.
 
-- Use `\` to execute OpenCode-specific commands:
-  - `\help` - Show available commands
-  - `\add` - Add files to the context
-
-- Use `!` to execute shell commands directly:
-  - `!dir` - List directory contents
-  - `!git status` - Check repository status
-
-- Use `@` to reference project files:
-  - `@index.ts` - Reference a specific file
-
-#### Running OpenCode
-
-OpenCode can be run directly from the terminal or through a web interface:
-
-```bash
-opencode          # Run in the terminal
-opencode --web    # Run in the web interface
-```
-
-The web interface tends to offer better formatting and a more visual experience.
-If you prefer the terminal, you can customize its appearance and keybindings
-through the [**`tui.json`**](https://opencode.ai/docs/tui/#configure)
-configuration file.
+| Keybind                                | Action Description                          |
+| -------------------------------------- | ------------------------------------------- |
+| `ctrl+x`                               | **_LEADER_**                                |
+| `<leader>q`                            | Exit OpenCode                               |
+| `<leader>p`                            | Open command palette                        |
+| `<leader>b`                            | Toggle sidebar                              |
+| `<leader>i`                            | Toggle scrollbar                            |
+| `<leader>c`                            | Copy last message                           |
+| `ctrl+r`                               | Rename session                              |
+| `ctrl+d`                               | Delete session                              |
+| `escape`                               | Interrupt session / Cancel autocomplete     |
+| `ctrl+return`                          | Submit prompt                               |
+| `return`                               | Newline in input / Select autocomplete      |
+| `tab`                                  | Cycle agent forward / Complete autocomplete |
+| `shift+tab`                            | Cycle agent backward                        |
+| `up`                                   | History previous / Navigate dialog up       |
+| `down`                                 | History next / Navigate dialog down         |
+| `pageup`                               | Page up messages                            |
+| `pagedown`                             | Page down messages                          |
+| `home`                                 | First message                               |
+| `end`                                  | Last message                                |
+| `ctrl+v`                               | Paste (allows default behavior)             |
+| `ctrl+a`                               | Select all in input                         |
+| `left` / `right`                       | Move cursor left/right                      |
+| `shift+left` / `shift+right`           | Select left/right                           |
+| `shift+up` / `shift+down`              | Select up/down                              |
+| `ctrl+left` / `ctrl+right`             | Move word backward/forward                  |
+| `ctrl+shift+left` / `ctrl+shift+right` | Select word backward/forward                |
+| `ctrl+backspace`                       | Delete word backward                        |
+| `ctrl+delete`                          | Delete word forward                         |
+| `space`                                | Toggle plugins                              |
+| `shift+i`                              | Install plugin                              |
+| `backspace` / `delete`                 | Backspace / Delete character                |
 
 <br>
 <br>
@@ -511,8 +526,8 @@ custom CSS into pages.
 
 [**`TrafficMonitor`**](https://github.com/zhongyang219/TrafficMonitor) is a
 **network monitoring tool for Windows** that displays real-time network speed,
-CPU usage, memory usage, and other system information directly on the taskbar
-or in a floating window. It is lightweight, highly customizable, and supports
+CPU usage, memory usage, and other system information directly on the taskbar or
+in a floating window. It is lightweight, highly customizable, and supports
 multiple display modes.
 
 To install TrafficMonitor, refer to the
@@ -534,8 +549,8 @@ specific aspect of the application.
 
 This configuration focuses primarily on the **Taskbar Window** display, as the
 **Main Window** is not used, it is considered unnecessary for this setup. All
-relevant settings are tailored to the taskbar integration, including item
-order, colors, font, spacing, and display format.
+relevant settings are tailored to the taskbar integration, including item order,
+colors, font, spacing, and display format.
 
 ### Known Issues
 
@@ -580,24 +595,27 @@ You can access my configuration file here:
 
 In VS Code,
 [**`settings.json`**](https://code.visualstudio.com/docs/configure/settings) is
-the main configuration file where **you can customize the editor’s appearance
+the main configuration file where **you can customize the editor's appearance
 and behavior, including themes, fonts, tab size, auto-save, and
 language-specific settings**. This file gives you full control over VS Code,
 allowing you to tailor both how it looks and how it responds to your workflow.
 
-In order for the settings to work properly, **install the following extensions**
-(if you don’t want to use any of them, simply remove them from the
-`settings.json` file):
+The following extensions are used in this configuration:
 
 | Name                      | Functionality                                       | Download Link                                                                                             |
 | ------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Git Bash                  | Terminal shell for Git commands on Windows          | [**`Download`**](https://git-scm.com/downloads)                                                           |
-| JetBrains Mono            | Programming font used in editor and terminal        | [**`Download`**](https://www.jetbrains.com/lp/mono/)                                                      |
 | Error Lens                | Highlights errors and warnings inline in the editor | [**`Download`**](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)                |
 | Bearded Icons             | Icon theme for VS Code                              | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=BeardedBear.beardedicons)           |
 | Mayukai Mono              | VS Code color theme                                 | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=GulajavaMinistudio.mayukaithemevsc) |
 | Prettier - Code formatter | Formats code automatically according to style rules | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=esbenp.prettier-vscode)             |
 | Red Hat YAML              | YAML language support and formatter                 | [**`Download`**](https://marketplace.visualstudio.com/items/?itemName=redhat.vscode-yaml)                 |
+
+The following system dependencies are also required:
+
+| Dependency | Purpose                                      | Download Link                                         |
+| ---------- | -------------------------------------------- | ----------------------------------------------------- |
+| Meslo LG L | Programming font used in editor and terminal | [**`Download`**](https://www.fontmirror.com/meslo-lg) |
+| Git Bash   | Terminal shell for Git commands on Windows   | [**`Download`**](https://git-scm.com/downloads)       |
 
 ### Tips
 
@@ -754,10 +772,10 @@ configuration and monitor system behavior.
 
 ## Additional Software
 
-| Software | Description |
-| -------- | ----------- |
-| [**`Brave`**](https://brave.com/) | Privacy-focused web browser with built-in ad and tracker blocking, faster page loading, and optional VPN. |
+| Software                                                     | Description                                                                                                                                                                                        |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [**`Brave`**](https://brave.com/)                            | Privacy-focused web browser with built-in ad and tracker blocking, faster page loading, and optional VPN.                                                                                          |
 | [**`GDownloader`**](https://github.com/hstr0100/GDownloader) | User-friendly GUI wrapper for yt-dlp, gallery-dl, and spotDL that enables batch downloading of videos, audio, and image galleries from YouTube, Spotify, Crunchyroll, Twitch, and other platforms. |
-| [**`Mutello`**](https://www.mutello.org/) | Lightweight Windows mic-mute app for the system tray with a global hotkey, optional always-on-top overlay, and clear mute state for the default recording device. |
-| [**`ShareX`**](https://getsharex.com/) | Free and open source screen capture, screen recording (including GIF), file sharing, and productivity tool for Windows with annotation, editing, and customizable upload workflows. |
-| [**`WizTree`**](https://diskanalyzer.com/) | High-speed disk space analyzer for Windows that reads the NTFS Master File Table directly to scan drives in seconds, finding the largest files and folders visually. |
+| [**`Mutello`**](https://www.mutello.org/)                    | Lightweight Windows mic-mute app for the system tray with a global hotkey, optional always-on-top overlay, and clear mute state for the default recording device.                                  |
+| [**`ShareX`**](https://getsharex.com/)                       | Free and open source screen capture, screen recording (including GIF), file sharing, and productivity tool for Windows with annotation, editing, and customizable upload workflows.                |
+| [**`WizTree`**](https://diskanalyzer.com/)                   | High-speed disk space analyzer for Windows that reads the NTFS Master File Table directly to scan drives in seconds, finding the largest files and folders visually.                               |
