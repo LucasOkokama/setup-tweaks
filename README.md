@@ -31,6 +31,9 @@ applicable, the following topics are used:
 - `Known Issues`: A short summary of limitations or edge cases, with links to
   official documentation or issue trackers when relevant.
 
+- `Keybindings`: A reference table of keyboard shortcuts and their associated
+  actions, when the tool supports custom keybindings.
+
 The emphasis is on standardization, organization, and portability. **All files
 are grouped into dedicated directories with clear naming conventions**, ensuring
 that the repository remains maintainable and easy to navigate. The structure is
