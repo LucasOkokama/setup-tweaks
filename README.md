@@ -413,11 +413,12 @@ OpenCode. See the
 [**`official skills documentation`**](https://opencode.ai/docs/skills/) for more
 details on creating and using skills.
 
-| Skill                  | Purpose                                                   |
+| Skill                          | Purpose                                                   |
 | ---------------------- | --------------------------------------------------------- |
-| `k2gj-commit-message`  | Generate Conventional Commits messages from diffs/changes |
-| `k2gj-dead-code`       | Detect and report potentially unused/unreachable code     |
-| `k2gj-generate-readme` | Generate project README from repository evidence          |
+| `k2gj-commit-message`          | Generate Conventional Commits messages from diffs/changes |
+| `k2gj-dead-code`               | Detect and report potentially unused/unreachable code     |
+| `k2gj-generate-readme`        | Generate project README from repository evidence          |
+| `k2gj-prune-gone-branches`    | Clean up local Git branches whose remote upstream has been deleted |
 
 ### Keybindings
 
