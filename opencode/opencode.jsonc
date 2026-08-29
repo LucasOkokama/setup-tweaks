@@ -7,6 +7,57 @@
     "mdnsDomain": "opencode.local",
   },
   "model": "opencode/nemotron-3-ultra-free",
+  "provider": {
+    "google": {
+      "whitelist": [
+        /*
+          MODELS --> https://ai.google.dev/gemini-api/docs/models
+          KEY --> https://aistudio.google.com/api-keys
+          PROJECT --> https://console.cloud.google.com/cloud-resource-manager
+          USAGE --> https://aistudio.google.com/usage
+          RATE LIMIT --> https://aistudio.google.com/rate-limit
+        */
+        "gemini-3.7-flash",
+        "gemini-3.6-flash",
+        "gemini-3.5-flash",
+        "gemini-3.5-flash-lite",
+        "gemini-3.1-flash-lite",
+      ],
+    },
+    "openrouter": {
+      /*
+        MODELS --> https://openrouter.ai/models
+        KEY --> https://openrouter.ai/workspaces/default/keys
+        ACTIVITY --> https://openrouter.ai/activity
+      */
+      "whitelist": [
+        "z-ai/glm-5.2:free",
+        "minimax/minimax-m3:free",
+        "minimax/minimax-m2.7:free",
+        "thinkingmachines/inkling:free",
+        "thinkingmachines/inkling-small:free",
+        "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "nvidia/nemotron-3-super-120b-a12b:free",
+        "nvidia/nemotron-3.5-lightning:free",
+        "cohere/north-mini-code:free",
+        "poolside/laguna-s-2.1:free",
+      ],
+    },
+    "mistral": {
+      /*
+        MODELS --> https://docs.mistral.ai/models
+        KEY --> https://console.mistral.ai/api-keys
+        USAGE --> https://admin.mistral.ai/organization/usage
+        RATE LIMIT --> https://admin.mistral.ai/plateforme/limits
+      */
+      "whitelist": [
+        "mistral-medium-latest",
+        "mistral-small-latest",
+        "ministral-8b-latest",
+        "ministral-3b-latest",
+      ],
+    },
+  },
   "share": "disabled",
   "snapshot": true,
   "autoupdate": true,

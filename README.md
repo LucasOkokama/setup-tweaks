@@ -22,6 +22,9 @@ applicable, the following topics are used:
   repository, with a short explanation of their structure and what aspects of
   the tool they control.
 
+- `Keybindings`: A reference table of keyboard shortcuts and their associated
+  actions, when the tool supports custom keybindings.
+
 - `Inspirations`: References to themes, repositories, or style guides that
   influenced the visual design or structural approach, when applicable.
 
@@ -30,9 +33,6 @@ applicable, the following topics are used:
 
 - `Known Issues`: A short summary of limitations or edge cases, with links to
   official documentation or issue trackers when relevant.
-
-- `Keybindings`: A reference table of keyboard shortcuts and their associated
-  actions, when the tool supports custom keybindings.
 
 The emphasis is on standardization, organization, and portability. **All files
 are grouped into dedicated directories with clear naming conventions**, ensuring
@@ -457,6 +457,28 @@ configuration. Bindings set to `none` are disabled.
 | `space`                                | Toggle plugins                              |
 | `shift+i`                              | Install plugin                              |
 | `backspace` / `delete`                 | Backspace / Delete character                |
+
+### Tips
+
+In the `provider` field of the
+[**`opencode.jsonc`**](./opencode/opencode.jsonc) configuration file, a set of
+pre-selected AI models is defined to appear in OpenCode. The configured
+providers in this setup are:
+
+- **Google**
+- **OpenRouter**
+- **Mistral**
+
+These entries control which models from each provider are available to select
+and use inside OpenCode, keeping the model list focused on the options that
+matter for this setup.
+
+If desired, you can edit the `provider` field to change which AI models appear,
+swap providers entirely, or adjust other relevant provider settings (such as
+API keys, base URLs, or model-specific options). For a complete reference of all
+supported providers, their configuration fields, and the available models,
+consult the
+[**`OpenCode Providers documentation`**](https://opencode.ai/docs/providers/).
 
 <br>
 <br>
