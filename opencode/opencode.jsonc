@@ -114,4 +114,20 @@
       "__pycache__/**",
     ],
   },
+  "mcp": {
+    /*
+      GitHub MCP --> https://github.com/github/github-mcp-server
+      Token --> https://github.com/settings/personal-access-tokens
+      Permissions --> https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+    */
+    "github": {
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "enabled": true,
+      "oauth": false,
+      "headers": {
+        "Authorization": "Bearer {env:GITHUB_PERSONAL_ACCESS_TOKEN}",
+      },
+    },
+  },
 }

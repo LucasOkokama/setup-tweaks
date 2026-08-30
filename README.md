@@ -461,6 +461,8 @@ configuration. Bindings set to `none` are disabled.
 
 ### Tips
 
+#### Provider
+
 In the `provider` field of the
 [**`opencode.jsonc`**](./opencode/opencode.jsonc) configuration file, a set of
 pre-selected AI models is defined to appear in OpenCode. The configured
@@ -481,6 +483,43 @@ API keys, base URLs, or model-specific options). For a complete reference of all
 supported providers, their configuration fields, and the available models,
 consult the
 [**`OpenCode Providers documentation`**](https://opencode.ai/docs/providers/).
+
+#### MCP
+
+The `mcp` field in the
+[**`opencode.jsonc`**](./opencode/opencode.jsonc) configuration file defines
+**MCP Servers** (Model Context Protocol) that extend OpenCode's capabilities by
+integrating external services. These servers allow the assistant to interact
+with external APIs and tools directly from the terminal. For a complete
+reference, consult the
+[**`official MCP Servers documentation`**](https://opencode.ai/docs/mcp-servers/).
+
+Currently configured MCP servers:
+
+- **GitHub** — Integrates with the GitHub API via the
+  [**GitHub MCP Server**](https://github.com/github/github-mcp-server). To use it,
+  you must create a
+  [**Personal Access Token**](https://github.com/settings/personal-access-tokens).
+  The required permissions for fine-grained tokens can be found in the
+  [**official GitHub documentation**](https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens).
+
+If the token is accessed through an environment variable on Windows, you can set
+and verify it with the following snippet:
+
+```powershell
+[Environment]::SetEnvironmentVariable(
+  "TOKEN_NAME",
+  "github_pat_XXXXXXXXXXXXXXX",
+  "User"
+)
+```
+
+```powershell
+[Environment]::GetEnvironmentVariable(
+  "TOKEN_NAME",
+  "User"
+)
+```
 
 <br>
 <br>
