@@ -467,8 +467,9 @@ pre-selected AI models is defined to appear in OpenCode. The configured
 providers in this setup are:
 
 - **Google**
-- **OpenRouter**
+- **Nvidia**
 - **Mistral**
+- **OpenRouter**
 
 These entries control which models from each provider are available to select
 and use inside OpenCode, keeping the model list focused on the options that
