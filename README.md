@@ -413,12 +413,13 @@ OpenCode. See the
 [**`official skills documentation`**](https://opencode.ai/docs/skills/) for more
 details on creating and using skills.
 
-| Skill                          | Purpose                                                   |
-| ---------------------- | --------------------------------------------------------- |
-| `k2gj-commit-message`          | Generate Conventional Commits messages from diffs/changes |
-| `k2gj-dead-code`               | Detect and report potentially unused/unreachable code     |
-| `k2gj-generate-readme`        | Generate project README from repository evidence          |
-| `k2gj-prune-gone-branches`    | Clean up local Git branches whose remote upstream has been deleted |
+| Skill                      | Purpose                                                            |
+| -------------------------- | ------------------------------------------------------------------ |
+| `k2gj-commit-message`      | Generate Conventional Commits messages from diffs/changes          |
+| `k2gj-create-pull-request` | Create GitHub pull requests from the current repository changes    |
+| `k2gj-dead-code`           | Detect and report potentially unused/unreachable code              |
+| `k2gj-generate-readme`     | Generate project README from repository evidence                   |
+| `k2gj-prune-gone-branches` | Clean up local Git branches whose remote upstream has been deleted |
 
 ### Keybindings
 
@@ -463,10 +464,9 @@ configuration. Bindings set to `none` are disabled.
 
 #### Provider
 
-In the `provider` field of the
-[**`opencode.jsonc`**](./opencode/opencode.jsonc) configuration file, a set of
-pre-selected AI models is defined to appear in OpenCode. The configured
-providers in this setup are:
+In the `provider` field of the [**`opencode.jsonc`**](./opencode/opencode.jsonc)
+configuration file, a set of pre-selected AI models is defined to appear in
+OpenCode. The configured providers in this setup are:
 
 - **Google**
 - **Nvidia**
@@ -478,27 +478,26 @@ and use inside OpenCode, keeping the model list focused on the options that
 matter for this setup.
 
 If desired, you can edit the `provider` field to change which AI models appear,
-swap providers entirely, or adjust other relevant provider settings (such as
-API keys, base URLs, or model-specific options). For a complete reference of all
+swap providers entirely, or adjust other relevant provider settings (such as API
+keys, base URLs, or model-specific options). For a complete reference of all
 supported providers, their configuration fields, and the available models,
 consult the
 [**`OpenCode Providers documentation`**](https://opencode.ai/docs/providers/).
 
 #### MCP
 
-The `mcp` field in the
-[**`opencode.jsonc`**](./opencode/opencode.jsonc) configuration file defines
-**MCP Servers** (Model Context Protocol) that extend OpenCode's capabilities by
-integrating external services. These servers allow the assistant to interact
-with external APIs and tools directly from the terminal. For a complete
-reference, consult the
+The `mcp` field in the [**`opencode.jsonc`**](./opencode/opencode.jsonc)
+configuration file defines **MCP Servers** (Model Context Protocol) that extend
+OpenCode's capabilities by integrating external services. These servers allow
+the assistant to interact with external APIs and tools directly from the
+terminal. For a complete reference, consult the
 [**`official MCP Servers documentation`**](https://opencode.ai/docs/mcp-servers/).
 
 Currently configured MCP servers:
 
 - **GitHub** — Integrates with the GitHub API via the
-  [**GitHub MCP Server**](https://github.com/github/github-mcp-server). To use it,
-  you must create a
+  [**GitHub MCP Server**](https://github.com/github/github-mcp-server). To use
+  it, you must create a
   [**Personal Access Token**](https://github.com/settings/personal-access-tokens).
   The required permissions for fine-grained tokens can be found in the
   [**official GitHub documentation**](https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens).
