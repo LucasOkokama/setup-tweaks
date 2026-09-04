@@ -43,6 +43,8 @@ The skill may use:
 - Base the PR content on repository evidence and user-provided context. Never
   invent repository facts, test results, issue references, or breaking changes.
 - Omit optional sections when they are not applicable.
+- All pull request content must be written in English, including the title,
+  body, section headings, bullet points, and issue references when applicable.
 
 ## Workflow
 
@@ -72,6 +74,12 @@ Identify:
 
 Generate and validate the PR title and body according to the conventions defined
 in the skill-specific sections.
+
+All generated pull request content must be written in English.
+
+Repository content, code, commit messages, issue titles, or other source
+material may be in another language, but the resulting pull request content must
+always be in English.
 
 ### 4. Create or Update the PR
 
