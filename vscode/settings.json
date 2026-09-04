@@ -150,7 +150,21 @@
   "editor.hideCursorInOverviewRuler": true,
   "terminal.integrated.fontFamily": "Meslo LG L", // https://www.fontmirror.com/meslo-lg
   "terminal.integrated.fontWeight": "400",
-  "terminal.integrated.defaultProfile.windows": "Git Bash", // https://git-scm.com/downloads
+  "terminal.integrated.defaultProfile.windows": "PowerShell 7",
+  "terminal.integrated.profiles.windows": {
+    "Command Prompt": {
+      "path": "C:\\Windows\\System32\\cmd.exe"
+    },
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe" // https://git-scm.com/downloads
+    },
+    "PowerShell 7": {
+      "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe" // https://learn.microsoft.com/powershell/scripting/install/install-powershell-on-windows
+    },
+    "Windows PowerShell": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  },
   "terminal.integrated.fontSize": 10,
   "terminal.integrated.lineHeight": 1.8,
   "terminal.integrated.smoothScrolling": true,

@@ -702,10 +702,11 @@ The following extensions are used in this configuration:
 
 The following system dependencies are also required:
 
-| Dependency | Purpose                                      | Download Link                                         |
-| ---------- | -------------------------------------------- | ----------------------------------------------------- |
-| Meslo LG L | Programming font used in editor and terminal | [**`Download`**](https://www.fontmirror.com/meslo-lg) |
-| Git Bash   | Terminal shell for Git commands on Windows   | [**`Download`**](https://git-scm.com/downloads)       |
+| Dependency   | Purpose                                              | Download Link                                                                                            |
+| ------------ | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Meslo LG L   | Programming font used in editor and terminal         | [**`Download`**](https://www.fontmirror.com/meslo-lg)                                                    |
+| Git Bash     | Terminal shell for Git commands on Windows           | [**`Download`**](https://git-scm.com/downloads)                                                          |
+| PowerShell 7 | Modern PowerShell version (default terminal profile) | [**`Download`**](https://learn.microsoft.com/powershell/scripting/install/install-powershell-on-windows) |
 
 ### Keybindings
 
