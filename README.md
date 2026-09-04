@@ -420,6 +420,7 @@ details on creating and using skills.
 | `k2gj-dead-code`           | Detect and report potentially unused/unreachable code              |
 | `k2gj-generate-readme`     | Generate project README from repository evidence                   |
 | `k2gj-prune-gone-branches` | Clean up local Git branches whose remote upstream has been deleted |
+| `k2gj-create-code-review`  | Perform evidence-based code reviews for worktree/file/PR/project  |
 
 ### Keybindings
 
