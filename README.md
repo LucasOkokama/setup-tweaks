@@ -347,7 +347,7 @@ For reference, consult the official Microsoft documentation for the
 [**`United States Keyboard Layout`**](https://learn.microsoft.com/windows/win32/inputdev/virtual-key-codes)
 to review the standard virtual-key definitions. If you are working with a
 different keyboard layout, such as the
-[**`Brazilian Keyboard Layout (ABNT2)`**](https://kbdlayout.info/KBDBR/virtualkeys),
+[**`Brazilian Keyboard Layout (ABNT2)`**](https://kbdlayout.info/KBDBR/virtualkeys+text),
 you can use the kbdlayout website as previously described to look up the
 corresponding virtual-key mappings and OEM values.
 
@@ -420,7 +420,7 @@ details on creating and using skills.
 | `k2gj-dead-code`           | Detect and report potentially unused/unreachable code              |
 | `k2gj-generate-readme`     | Generate project README from repository evidence                   |
 | `k2gj-prune-gone-branches` | Clean up local Git branches whose remote upstream has been deleted |
-| `k2gj-create-code-review`  | Perform evidence-based code reviews for worktree/file/PR/project  |
+| `k2gj-create-code-review`  | Perform evidence-based code reviews for worktree/file/PR/project   |
 
 ### Keybindings
 
@@ -658,6 +658,7 @@ start coding.
 You can access my configuration file here:
 
 - [**`settings.json`**](./vscode/settings.json)
+- [**`keybindings.json`**](./vscode/keybindings.json)
 
 In VS Code,
 [**`settings.json`**](https://code.visualstudio.com/docs/configure/settings) is
@@ -665,6 +666,29 @@ the main configuration file where **you can customize the editor's appearance
 and behavior, including themes, fonts, tab size, auto-save, and
 language-specific settings**. This file gives you full control over VS Code,
 allowing you to tailor both how it looks and how it responds to your workflow.
+
+The
+[**`keybindings.json`**](https://code.visualstudio.com/docs/reference/default-keybindings)
+file is where **custom keyboard shortcuts are defined, overriding or extending
+VS Code's default keybindings**. Each entry maps a key combination to a command,
+optionally gated by a context `when` clause, allowing fine-grained control over
+when the shortcut activates. For a complete reference of the available key
+identifiers, see the
+[**`VS Code key codes source`**](https://github.com/microsoft/vscode/blob/main/src/vs/base/common/keyCodes.ts),
+and for the full list of default commands and their built-in shortcuts, consult
+the
+[**`doc.keybindings.win.json`**](https://github.com/microsoft/vscode-docs/blob/main/build/keybindings/doc.keybindings.win.json)
+documentation.
+
+This configuration uses **OEM key identifiers** (such as `OEM_7`, `OEM_5`,
+`OEM_COMMA`) to map layout-specific keys consistently across keyboard layouts.
+OEM keys are layout-dependent keys whose printed character changes depending on
+the keyboard language. To look up which key on a specific layout maps to a given
+OEM identifier, use the [**`kbdlayout`**](https://kbdlayout.info/) website.
+Since this setup targets the **Brazilian Keyboard Layout (ABNT2)**, the
+human-readable forms shown in the keybindings table below follow the
+[**`ABNT2 virtual keys`**](https://kbdlayout.info/KBDBR/virtualkeys+text)
+mapping.
 
 The following extensions are used in this configuration:
 
@@ -682,6 +706,103 @@ The following system dependencies are also required:
 | ---------- | -------------------------------------------- | ----------------------------------------------------- |
 | Meslo LG L | Programming font used in editor and terminal | [**`Download`**](https://www.fontmirror.com/meslo-lg) |
 | Git Bash   | Terminal shell for Git commands on Windows   | [**`Download`**](https://git-scm.com/downloads)       |
+
+### Keybindings
+
+Here is a table showing the **keybindings** from my personal `keybindings.json`
+configuration:
+
+| Keybind                           | Action Description                                                                       |
+| --------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctrl+x`                          | Cut selected text, or the entire current line when no text is selected                   |
+| `ctrl+c`                          | Copy selected text, or the entire current line when no text is selected                  |
+| `ctrl+v`                          | Paste current clipboard contents at the cursor or over the active selection              |
+| `ctrl+shift+d`                    | Delete the entire line containing the cursor or all currently selected lines             |
+| `f2`                              | Rename the symbol under the cursor and update its references when supported              |
+| `ctrl+OEM_7` (ctrl+~)             | Toggle line comments on the current line or on all selected lines                        |
+| `ctrl+shift+OEM_7` (ctrl+^)       | Toggle a block comment around the selected text using the language's block syntax        |
+| `ctrl+enter`                      | Insert a new line immediately below the current line                                     |
+| `ctrl+shift+enter`                | Insert a new line immediately above the current line                                     |
+| `alt+up`                          | Move the current line, or all selected lines, one position upward                        |
+| `alt+down`                        | Move the current line, or all selected lines, one position downward                      |
+| `ctrl+z`                          | Revert the most recent editing operation in the current editor                           |
+| `ctrl+y`                          | Reapply the most recently undone editing operation                                       |
+| `home`                            | Move the cursor to the beginning of the current line                                     |
+| `end`                             | Move the cursor to the end of the current line                                           |
+| `ctrl+home`                       | Move the cursor directly to the beginning of the current document                        |
+| `ctrl+end`                        | Move the cursor directly to the end of the current document                              |
+| `ctrl+space`                      | Manually open the completion and suggestion list at the current cursor position          |
+| `ctrl+d`                          | Add the next occurrence of the current selection to the multi-selection                  |
+| `ctrl+shift+a`                    | Select every occurrence matching the currently selected text                             |
+| `ctrl+l`                          | Select the entire line containing the cursor, including its line-ending position         |
+| `shift+alt+up`                    | Add a second cursor on the line directly above the current cursor position               |
+| `shift+alt+down`                  | Add a second cursor on the line directly below the current cursor position               |
+| `ctrl+alt+up`                     | Duplicate the current line or selected lines immediately above the original content      |
+| `ctrl+alt+down`                   | Duplicate the current line or selected lines immediately below the original content      |
+| `ctrl+OEM_5` (ctrl+])             | Jump the cursor between matching brackets, parentheses, braces, or paired delimiters     |
+| `ctrl+OEM_2` (ctrl+;)             | Toggle the folded state of the code region surrounding the cursor                        |
+| `ctrl+OEM_COMMA` (ctrl+,)         | Collapse every foldable region in the current editor                                     |
+| `ctrl+OEM_PERIOD` (ctrl+.)        | Expand every folded region in the current editor                                         |
+| `ctrl+f`                          | Open the inline editor search box to find text within the currently focused document     |
+| `ctrl+h`                          | Open the editor's find-and-replace interface for the current document                    |
+| `enter`                           | Move to the next matching result while the find input is focused                         |
+| `shift+enter`                     | Move to the previous matching result while the find input is focused                     |
+| `ctrl+shift+f`                    | Open the Search view to search across files in the current workspace                     |
+| `ctrl+shift+h`                    | Open the workspace-wide replacement interface for replacing text across files            |
+| `alt+enter`                       | Open the current search results in a dedicated search editor                             |
+| `escape`                          | Close the active Search Editor                                                           |
+| `ctrl+shift+backspace`            | Delete the result file associated with the current search editor                         |
+| `ctrl+n`                          | Create and open a new untitled file in the current VS Code window                        |
+| `ctrl+o`                          | Open the native file picker to select a file to open in VS Code                          |
+| `ctrl+s`                          | Save the currently active file to disk                                                   |
+| `ctrl+shift+s`                    | Save all modified files currently open in the workspace or editor                        |
+| `ctrl+alt+s`                      | Open Save As so the active file can be saved under a different name or location          |
+| `ctrl+w`                          | Close the currently active editor tab without closing the entire VS Code window          |
+| `ctrl+shift+w`                    | Close all editor tabs contained in the currently active editor group                     |
+| `ctrl+shift+t`                    | Reopen the most recently closed editor                                                   |
+| `ctrl+p`                          | Open Quick Open to rapidly search for files, folders, or workspace resources             |
+| `ctrl+shift+q`                    | Reveal the currently active file in the Explorer and select it in the file tree          |
+| `ctrl+OEM_1` (ctrl+ç)             | Copy the complete filesystem path of the active file to the clipboard                    |
+| `ctrl+shift+OEM_1` (ctrl+shift+ç) | Reveal the active file at its filesystem location in the operating system's file manager |
+| `ctrl+tab`                        | Move directly to the next editor tab in the current editor group                         |
+| `ctrl+shift+tab`                  | Move directly to the previous editor tab in the current editor group                     |
+| `ctrl+alt+left`                   | Move the active editor tab one position to the left within the current editor group      |
+| `ctrl+alt+right`                  | Move the active editor tab one position to the right within the current editor group     |
+| `ctrl+shift+n`                    | Open a completely new VS Code window separate from the currently active window           |
+| `f11`                             | Toggle full-screen mode, expanding VS Code to use the entire screen                      |
+| `ctrl+b`                          | Show or hide the primary sidebar containing Explorer, Search, Source Control, etc.       |
+| `ctrl+shift+e`                    | Open the Explorer view and give focus to the workspace file tree                         |
+| `ctrl+shift+x`                    | Open the Extensions view where installed extensions can be managed                       |
+| `ctrl+shift+c`                    | Open the operating system's native console or command prompt from VS Code                |
+| `ctrl+OEM_3` (ctrl+')             | Show or hide the integrated terminal panel at the bottom of the VS Code window           |
+| `ctrl+shift+1`                    | Open the JSON version of VS Code's user settings                                         |
+| `ctrl+shift+2`                    | Open the global keybindings.json file                                                    |
+| `ctrl+shift+3`                    | Open the graphical Settings interface                                                    |
+| `ctrl+shift+4`                    | Open the Keyboard Shortcuts editor                                                       |
+| `ctrl+OEM_4` (ctrl+´)             | Open the theme selector to choose and apply a different VS Code color theme              |
+| `ctrl+shift+p`                    | Open the Command Palette                                                                 |
+| `ctrl+=`                          | Increase the overall VS Code interface zoom level                                        |
+| `ctrl+-`                          | Decrease the overall VS Code interface zoom level                                        |
+| `ctrl+numpad0`                    | Restore the VS Code interface zoom level to its default 100% scale                       |
+
+<!-- prettier-ignore-start -->
+> [!NOTE]
+> The following commands have been **completely removed** from my configuration
+> (i.e., they are no longer bound to any keyboard shortcut):
+>
+> - `editor.action.toggleTabFocusMode`
+> - `editor.action.outdentLines`
+> - `editor.action.indentLines`
+> - `workbench.view.debug`
+> - `workbench.action.openAgentsWindow`
+> - `workbench.action.closeWindow`
+> - `workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup`
+> - `workbench.action.moveEditorToPreviousGroup`
+> - `workbench.action.moveEditorToNextGroup`
+> - `editor.fold`
+> - `editor.action.quickFix`
+> - `workbench.action.splitEditor`
+<!-- prettier-ignore-end -->
 
 ### Tips
 

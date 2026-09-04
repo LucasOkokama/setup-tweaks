@@ -1,0 +1,519 @@
+[
+  // TEXT EDITING
+  {
+    // Cuts the selected text, or the entire current line when no text is selected.
+    "key": "ctrl+x",
+    "command": "editor.action.clipboardCutAction",
+    "when": "editorTextFocus"
+  },
+  {
+    // Copies the selected text, or the entire current line when no text is selected.
+    "key": "ctrl+c",
+    "command": "editor.action.clipboardCopyAction",
+    "when": "editorTextFocus"
+  },
+  {
+    // Pastes the current clipboard contents at the cursor or over the active selection.
+    "key": "ctrl+v",
+    "command": "editor.action.clipboardPasteAction",
+    "when": "editorTextFocus"
+  },
+  {
+    // Deletes the entire line containing the cursor or all currently selected lines.
+    "key": "ctrl+shift+d", // Ctrl+Shift+K
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus"
+  },
+
+  {
+    // Renames the symbol under the cursor and updates its references when supported by the language service.
+    "key": "f2",
+    "command": "editor.action.rename",
+    "when": "editorTextFocus"
+  },
+  {
+    // Toggles line comments on the current line or on all selected lines using the language's comment syntax.
+    "key": "ctrl+OEM_7", // Ctrl+/
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus"
+  },
+  {
+    // Toggles a block comment around the selected text using the language's supported block-comment syntax.
+    "key": "ctrl+shift+OEM_7", // Shift+Alt+A
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus"
+  },
+  {
+    // Inserts a new line immediately below the current line without moving the existing line's contents.
+    "key": "ctrl+enter",
+    "command": "editor.action.insertLineAfter",
+    "when": "editorTextFocus"
+  },
+  {
+    // Inserts a new line immediately above the current line without moving the existing line's contents.
+    "key": "ctrl+shift+enter",
+    "command": "editor.action.insertLineBefore",
+    "when": "editorTextFocus"
+  },
+  {
+    // Moves the current line, or all selected lines, one position upward in the editor.
+    "key": "alt+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus"
+  },
+  {
+    // Moves the current line, or all selected lines, one position downward in the editor.
+    "key": "alt+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    // Reverts the most recent editing operation in the current editor.
+    "key": "ctrl+z",
+    "command": "undo",
+    "when": "editorTextFocus"
+  },
+  {
+    // Reapplies the most recently undone editing operation.
+    "key": "ctrl+y",
+    "command": "redo",
+    "when": "editorTextFocus"
+  },
+  {
+    // Moves the cursor to the beginning of the current line.
+    "key": "home",
+    "command": "cursorHome",
+    "when": "editorTextFocus"
+  },
+  {
+    // Moves the cursor to the end of the current line.
+    "key": "end",
+    "command": "cursorEnd",
+    "when": "editorTextFocus"
+  },
+  {
+    // Moves the cursor directly to the beginning of the current document.
+    "key": "ctrl+home",
+    "command": "cursorTop",
+    "when": "editorTextFocus"
+  },
+  {
+    // Moves the cursor directly to the end of the current document.
+    "key": "ctrl+end",
+    "command": "cursorBottom",
+    "when": "editorTextFocus"
+  },
+  {
+    // Manually opens the completion and suggestion list at the current cursor position.
+    "key": "ctrl+space",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorTextFocus"
+  },
+
+  // SELECTION & MULTI-CURSOR
+  {
+    // Adds the next occurrence of the current selection to the multi-selection, allowing simultaneous editing.
+    "key": "ctrl+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorTextFocus"
+  },
+  {
+    // Selects every occurrence matching the currently selected text so they can be edited simultaneously.
+    "key": "ctrl+shift+a", // Ctrl+Shift+L
+    "command": "editor.action.selectHighlights"
+  },
+
+  {
+    // Selects the entire line containing the cursor, including its line-ending position.
+    "key": "ctrl+l",
+    "command": "expandLineSelection",
+    "when": "editorTextFocus"
+  },
+  {
+    // Adds a second cursor on the line directly above the current cursor position.
+    "key": "shift+alt+up",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    // Adds a second cursor on the line directly below the current cursor position.
+    "key": "shift+alt+down",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    // Duplicates the current line or selected lines immediately above the original content.
+    "key": "ctrl+alt+up", // Shift+Alt+Up
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus"
+  },
+  {
+    // Duplicates the current line or selected lines immediately below the original content.
+    "key": "ctrl+alt+down", // Shift+Alt+Down
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus"
+  },
+
+  // FILE NAVIGATION
+  {
+    // Jumps the cursor between matching brackets, parentheses, braces, or other supported paired delimiters.
+    "key": "ctrl+OEM_5",
+    "command": "editor.action.jumpToBracket",
+    "when": "editorTextFocus"
+  },
+  {
+    // Toggles the folded state of the code region surrounding the cursor.
+    "key": "ctrl+OEM_2", // Ctrl+K Ctrl+L
+    "command": "editor.toggleFold",
+    "when": "editorTextFocus"
+  },
+  {
+    // Collapses every foldable region in the current editor so the overall code structure is easier to inspect.
+    "key": "ctrl+OEM_COMMA", // Ctrl+K Ctrl+0
+    "command": "editor.foldAll",
+    "when": "editorTextFocus"
+  },
+  {
+    // Expands every folded region in the current editor and reveals the complete document structure.
+    "key": "ctrl+OEM_PERIOD", // Ctrl+K Ctrl+J
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus"
+  },
+
+  // SEARCH & REPLACE
+  {
+    // Opens the inline editor search box so you can find text within the currently focused document.
+    "key": "ctrl+f",
+    "command": "actions.find",
+    "when": "editorTextFocus"
+  },
+  {
+    // Opens the editor's find-and-replace interface for searching and replacing text in the current document.
+    "key": "ctrl+h",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorTextFocus"
+  },
+  {
+    // Moves the search selection to the next matching result while the find input is focused.
+    "key": "enter",
+    "command": "editor.action.nextMatchFindAction",
+    "when": "editorFocus && findInputFocussed"
+  },
+  {
+    // Moves the search selection to the previous matching result while the find input is focused.
+    "key": "shift+enter",
+    "command": "editor.action.previousMatchFindAction",
+    "when": "editorFocus && findInputFocussed"
+  },
+  {
+    // Opens the Search view to search across files in the current workspace or folder.
+    "key": "ctrl+shift+f",
+    "command": "workbench.view.search",
+    "when": "editorFocus"
+  },
+  {
+    // Opens the workspace-wide replacement interface for replacing matching text across multiple files.
+    "key": "ctrl+shift+h",
+    "command": "workbench.action.replaceInFiles",
+    "when": "editorFocus"
+  },
+  {
+    // Opens the current search results in a dedicated search editor for easier navigation and editing.
+    "key": "alt+enter",
+    "command": "search.action.openInEditor",
+    "when": "inSearchEditor"
+  },
+  {
+    // Closes the active Search Editor with Escape, replacing the default behavior of moving focus back to the Search Editor's search input.
+    "key": "escape",
+    "command": "workbench.action.closeActiveEditor", // search.action.focusQueryEditorWidget
+    "when": "inSearchEditor"
+  },
+  {
+    // Deletes the result file associated with the current search editor and its generated search results.
+    "key": "ctrl+shift+backspace",
+    "command": "search.searchEditor.action.deleteFileResults",
+    "when": "inSearchEditor"
+  },
+
+  // FILES
+  {
+    // Creates and opens a new untitled file in the current VS Code window.
+    "key": "ctrl+n",
+    "command": "workbench.action.files.newUntitledFile"
+  },
+  {
+    // Opens the native file picker so you can select a file to open in VS Code.
+    "key": "ctrl+o",
+    "command": "workbench.action.files.openFile"
+  },
+  {
+    // Saves the currently active file to disk, preserving its existing path when possible.
+    "key": "ctrl+s",
+    "command": "workbench.action.files.save"
+  },
+  {
+    // Saves all modified files currently open in the workspace or editor.
+    "key": "ctrl+shift+s", // Ctrl+K S
+    "command": "saveAll"
+  },
+
+  {
+    // Opens Save As so the active file can be saved under a different name or location.
+    "key": "ctrl+alt+s", // Ctrl+Shift+S
+    "command": "workbench.action.files.saveAs"
+  },
+  {
+    // Closes the currently active editor tab without closing the entire VS Code window.
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorFocus"
+  },
+  {
+    // Closes all editor tabs contained in the currently active editor group.
+    "key": "ctrl+shift+w", // Ctrl+K W
+    "command": "workbench.action.closeEditorsInGroup",
+    "when": "editorFocus"
+  },
+
+  {
+    // Reopens the most recently closed editor, restoring its previous file and editor state when available.
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.reopenClosedEditor"
+  },
+  {
+    // Opens Quick Open so you can rapidly search for and open files, folders, or other workspace resources.
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpen",
+    "when": "editorFocus"
+  },
+  {
+    // Reveals the currently active file in the Explorer and selects it in the file tree.
+    "key": "ctrl+shift+q",
+    "command": "workbench.files.action.showActiveFileInExplorer",
+    "when": "editorFocus"
+  },
+  {
+    // Copies the complete filesystem path of the active file to the clipboard.
+    "key": "ctrl+OEM_1", // Ctrl+K P
+    "command": "workbench.action.files.copyPathOfActiveFile",
+    "when": "editorFocus"
+  },
+  {
+    // Opens the operating system's file manager and reveals the active file at its filesystem location.
+    "key": "ctrl+shift+OEM_1", // Ctrl+K R
+    "command": "workbench.action.files.revealActiveFileInWindows",
+    "when": "editorFocus"
+  },
+
+  // WORKSPACE NAVIGATION
+  {
+    // Moves directly to the next editor tab in the current editor group instead of using the recent-editor picker.
+    "key": "ctrl+tab", // Ctrl+PageDown
+    "command": "workbench.action.nextEditor",
+    "when": "editorFocus"
+  },
+
+  {
+    // Moves directly to the previous editor tab in the current editor group instead of using the recent-editor picker.
+    "key": "ctrl+shift+tab", // Ctrl+PageUp
+    "command": "workbench.action.previousEditor",
+    "when": "editorFocus"
+  },
+
+  {
+    // Moves the active editor tab one position to the left within the current editor group.
+    "key": "ctrl+alt+left", // Ctrl+Shift+PageUp
+    "command": "workbench.action.moveEditorLeftInGroup",
+    "when": "editorFocus"
+  },
+
+  {
+    // Moves the active editor tab one position to the right within the current editor  group.
+    "key": "ctrl+alt+right", // Ctrl+Shift+PageDown
+    "command": "workbench.action.moveEditorRightInGroup",
+    "when": "editorFocus"
+  },
+
+  // WINDOWS
+  {
+    // Opens a completely new VS Code window separate from the currently active window.
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.newWindow"
+  },
+  {
+    // Toggles full-screen mode, expanding VS Code to use the entire screen and hiding the operating system window chrome.
+    "key": "f11",
+    "command": "workbench.action.toggleFullScreen"
+  },
+
+  // SIDEBAR & PANELS
+  {
+    // Shows or hides the primary sidebar containing views such as Explorer, Search, Source Control, and Extensions.
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    // Opens the Explorer view and gives focus to the workspace file tree.
+    "key": "ctrl+shift+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    // Opens the Extensions view where installed extensions can be searched, managed, or configured.
+    "key": "ctrl+shift+x",
+    "command": "workbench.view.extensions"
+  },
+
+  // TERMINAL
+  {
+    // Opens the operating system's native console or command prompt from within the VS Code environment.
+    "key": "ctrl+shift+c",
+    "command": "workbench.action.terminal.openNativeConsole"
+  },
+  {
+    // Shows or hides the integrated terminal panel at the bottom of the VS Code window.
+    "key": "ctrl+OEM_3",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+
+  // SETTINGS & COMMANDS
+  {
+    // Opens the JSON version of VS Code's user settings so configuration can be edited directly.
+    "key": "ctrl+shift+1",
+    "command": "workbench.action.openSettingsJson"
+  },
+  {
+    // Opens the global keybindings.json file where user-defined keyboard shortcuts are stored and customized.
+    "key": "ctrl+shift+2",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+  {
+    // Opens the graphical Settings interface where VS Code preferences can be searched and modified.
+    "key": "ctrl+shift+3",
+    "command": "workbench.action.openSettings"
+  },
+  {
+    // Opens the Keyboard Shortcuts editor where all available commands and their keybindings can be inspected and changed.
+    "key": "ctrl+shift+4", // Ctrl+K Ctrl+S
+    "command": "workbench.action.openGlobalKeybindings"
+  },
+  {
+    // Opens the theme selector so you can choose and immediately apply a different VS Code color theme.
+    "key": "ctrl+OEM_4",
+    "command": "workbench.action.selectTheme"
+  },
+  {
+    // Opens the Command Palette, providing searchable access to VS Code commands and actions.
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.showCommands",
+    "when": "editorFocus"
+  },
+
+  // ZOOM
+  {
+    // Increases the overall VS Code interface zoom level, making text and UI elements larger.
+    "key": "ctrl+=",
+    "command": "workbench.action.zoomIn"
+  },
+  {
+    // Decreases the overall VS Code interface zoom level, making text and UI elements smaller.
+    "key": "ctrl+-",
+    "command": "workbench.action.zoomOut"
+  },
+  {
+    // Restores the VS Code interface zoom level to its default 100% scale.
+    "key": "ctrl+numpad0",
+    "command": "workbench.action.zoomReset"
+  },
+
+  // REMOVED (UNUSED KEYBINDINGS)
+  {
+    // Disables Tab Focus Mode, which moves keyboard focus between the editor and UI controls.
+    "key": "ctrl+m",
+    "command": "-editor.action.toggleTabFocusMode"
+  },
+  {
+    // Disables the Outdent Line shortcut, which decreases the indentation of the current line or selected lines.
+    "key": "ctrl+OEM_4",
+    "command": "-editor.action.outdentLines"
+  },
+  {
+    // Disables the Indent Line shortcut, which increases the indentation of the current line or selected lines.
+    "key": "ctrl+OEM_6",
+    "command": "-editor.action.indentLines"
+  },
+
+  // REMOVED (KEYBINDINGS REASSIGNED TO OTHER COMMANDS)
+  {
+    // The "deleteLines" command now uses this keybinding.
+    "key": "ctrl+shift+d",
+    "command": "-workbench.view.debug"
+  },
+  {
+    // The "selectHighlights" command now uses this keybinding.
+    "key": "ctrl+shift+a",
+    "command": "-workbench.action.openAgentsWindow"
+  },
+  {
+    // The "closeEditorsInGroup" command now uses this keybinding.
+    "key": "ctrl+shift+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    // The "nextEditor" command now uses this keybinding.
+    "key": "ctrl+tab",
+    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+  },
+  {
+    // The "previousEditor" command now uses this keybinding.
+    "key": "ctrl+shift+tab",
+    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+  },
+  {
+    // The "moveEditorLeftInGroup" command now uses this keybinding.
+    "key": "ctrl+alt+left",
+    "command": "-workbench.action.moveEditorToPreviousGroup"
+  },
+  {
+    // The "moveEditorRightInGroup" command now uses this keybinding.
+    "key": "ctrl+alt+right",
+    "command": "-workbench.action.moveEditorToNextGroup"
+  },
+  {
+    // The "selectTheme" command now uses this keybinding.
+    "key": "ctrl+shift+OEM_4",
+    "command": "-editor.fold"
+  },
+  {
+    // The "unfoldAll" command now uses this keybinding.
+    "key": "ctrl+OEM_PERIOD",
+    "command": "-editor.action.quickFix"
+  },
+  {
+    // The "jumpToBracket" command now uses this keybinding.
+    "key": "ctrl+OEM_5",
+    "command": "-workbench.action.splitEditor"
+  },
+
+  // REMOVED (COMMANDS REASSIGNED TO OTHER KEYBINDINGS)
+  {
+    // Now handled by Ctrl+OEM_7.
+    "key": "ctrl+OEM_2",
+    "command": "-editor.action.commentLine"
+  },
+  {
+    // Now handled by Ctrl+Shift+3.
+    "key": "ctrl+oem_comma",
+    "command": "-workbench.action.openSettings"
+  },
+  {
+    // Now handled by Ctrl+Alt+S.
+    "key": "ctrl+shift+s",
+    "command": "-workbench.action.files.saveAs"
+  },
+  {
+    // Now handled by Ctrl+OEM_5.
+    "key": "ctrl+shift+OEM_5",
+    "command": "-editor.action.jumpToBracket"
+  }
+]
