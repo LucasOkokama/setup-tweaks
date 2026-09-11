@@ -765,8 +765,9 @@ configuration:
 | `ctrl+shift+q`                    | Reveal the currently active file in the Explorer and select it in the file tree          |
 | `ctrl+OEM_1` (ctrl+ç)             | Copy the complete filesystem path of the active file to the clipboard                    |
 | `ctrl+shift+OEM_1` (ctrl+shift+ç) | Reveal the active file at its filesystem location in the operating system's file manager |
-| `ctrl+tab`                        | Move directly to the next editor tab in the current editor group                         |
-| `ctrl+shift+tab`                  | Move directly to the previous editor tab in the current editor group                     |
+| `ctrl+tab`                        | Open the recently used editor picker and navigate to the previous recently used editor  |
+| `alt+left`                        | Move directly to the previous editor tab in the current editor group                     |
+| `alt+right`                       | Move directly to the next editor tab in the current editor group                         |
 | `ctrl+alt+left`                   | Move the active editor tab one position to the left within the current editor group      |
 | `ctrl+alt+right`                  | Move the active editor tab one position to the right within the current editor group     |
 | `ctrl+shift+n`                    | Open a completely new VS Code window separate from the currently active window           |
@@ -797,9 +798,10 @@ configuration:
 > - `workbench.view.debug`
 > - `workbench.action.openAgentsWindow`
 > - `workbench.action.closeWindow`
-> - `workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup`
 > - `workbench.action.moveEditorToPreviousGroup`
 > - `workbench.action.moveEditorToNextGroup`
+> - `workbench.action.navigateBack`
+> - `workbench.action.navigateForward`
 > - `editor.fold`
 > - `editor.action.quickFix`
 > - `workbench.action.splitEditor`

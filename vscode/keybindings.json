@@ -24,7 +24,6 @@
     "command": "editor.action.deleteLines",
     "when": "editorTextFocus"
   },
-
   {
     // Renames the symbol under the cursor and updates its references when supported by the language service.
     "key": "f2",
@@ -122,7 +121,6 @@
     "key": "ctrl+shift+a", // Ctrl+Shift+L
     "command": "editor.action.selectHighlights"
   },
-
   {
     // Selects the entire line containing the cursor, including its line-ending position.
     "key": "ctrl+l",
@@ -257,7 +255,6 @@
     "key": "ctrl+shift+s", // Ctrl+K S
     "command": "saveAll"
   },
-
   {
     // Opens Save As so the active file can be saved under a different name or location.
     "key": "ctrl+alt+s", // Ctrl+Shift+S
@@ -275,7 +272,6 @@
     "command": "workbench.action.closeEditorsInGroup",
     "when": "editorFocus"
   },
-
   {
     // Reopens the most recently closed editor, restoring its previous file and editor state when available.
     "key": "ctrl+shift+t",
@@ -308,26 +304,29 @@
 
   // WORKSPACE NAVIGATION
   {
-    // Moves directly to the next editor tab in the current editor group instead of using the recent-editor picker.
-    "key": "ctrl+tab", // Ctrl+PageDown
-    "command": "workbench.action.nextEditor",
+    // Opens the recently used editor picker and navigates to the previous recently used editor.
+    "key": "ctrl+tab",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
     "when": "editorFocus"
   },
-
   {
-    // Moves directly to the previous editor tab in the current editor group instead of using the recent-editor picker.
-    "key": "ctrl+shift+tab", // Ctrl+PageUp
+    // Moves the active editor tab one position to the left within the current editor group.
+    "key": "alt+left", // Ctrl+PageUp
     "command": "workbench.action.previousEditor",
     "when": "editorFocus"
   },
-
+  {
+    // Moves the active editor tab one position to the right within the current editor group.
+    "key": "alt+right", // Ctrl+PageDown
+    "command": "workbench.action.nextEditor",
+    "when": "editorFocus"
+  },
   {
     // Moves the active editor tab one position to the left within the current editor group.
     "key": "ctrl+alt+left", // Ctrl+Shift+PageUp
     "command": "workbench.action.moveEditorLeftInGroup",
     "when": "editorFocus"
   },
-
   {
     // Moves the active editor tab one position to the right within the current editor  group.
     "key": "ctrl+alt+right", // Ctrl+Shift+PageDown
@@ -460,16 +459,6 @@
     "command": "-workbench.action.closeWindow"
   },
   {
-    // The "nextEditor" command now uses this keybinding.
-    "key": "ctrl+tab",
-    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
-  },
-  {
-    // The "previousEditor" command now uses this keybinding.
-    "key": "ctrl+shift+tab",
-    "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
-  },
-  {
     // The "moveEditorLeftInGroup" command now uses this keybinding.
     "key": "ctrl+alt+left",
     "command": "-workbench.action.moveEditorToPreviousGroup"
@@ -493,6 +482,16 @@
     // The "jumpToBracket" command now uses this keybinding.
     "key": "ctrl+OEM_5",
     "command": "-workbench.action.splitEditor"
+  },
+  {
+    // The "previousEditor" command now uses this keybinding.
+    "key": "alt+left",
+    "command": "-workbench.action.navigateBack"
+  },
+  {
+    // The "nextEditor" command now uses this keybinding.
+    "key": "alt+right",
+    "command": "-workbench.action.navigateForward"
   },
 
   // REMOVED (COMMANDS REASSIGNED TO OTHER KEYBINDINGS)
